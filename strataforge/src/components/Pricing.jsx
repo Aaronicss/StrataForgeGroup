@@ -3,29 +3,6 @@ import Button from "./Button";
 
 const plans = [
   {
-    name: "Starter Site",
-    price: "From $1,200",
-    blurb: "A polished marketing website for a new brand or local business.",
-    features: [
-      "Up to 5 pages",
-      "Mobile-responsive layout",
-      "Contact form",
-      "Basic SEO setup",
-    ],
-  },
-  {
-    name: "Business Platform",
-    price: "From $3,800",
-    featured: true,
-    blurb: "A custom web app or store built around your operations.",
-    features: [
-      "Custom UI and features",
-      "Admin dashboard",
-      "Database & integrations",
-      "Launch support",
-    ],
-  },
-  {
     name: "Custom System",
     price: "Let's talk",
     blurb: "Inventory, POS, student systems, and other internal software.",
@@ -60,7 +37,7 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 lg:grid-cols-3">
+        <div className="mt-12 grid gap-5 lg:grid-cols-1">
           {plans.map((plan) => (
             <article
               key={plan.name}
