@@ -8,8 +8,15 @@ import About from "./components/About";
 import Pricing from "./components/Pricing";
 import ContactCta from "./components/ContactCta";
 import Footer from "./components/Footer";
+import ProjectsPage from "./components/ProjectsPage";
 
 export default function App() {
+  if (window.location.pathname.replace(/\/$/, "") === "/projects") {
+    return (
+      <ProjectsPage />
+    );
+  }
+
   return (
     <div className="min-h-svh bg-white">
       <Navbar />

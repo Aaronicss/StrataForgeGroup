@@ -60,16 +60,16 @@ export default function Services() {
           {services.map(({ icon: Icon, title, text }) => (
             <article
               key={title}
-              className="rounded-2xl bg-card p-7 transition duration-200 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(15,23,42,0.08)]"
+              className="flex h-full flex-col rounded-2xl bg-card p-7 transition duration-200 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(15,23,42,0.08)]"
             >
               <span className="text-brand">
                 <Icon size={26} strokeWidth={1.75} />
               </span>
               <h3 className="mt-5 text-lg font-bold text-navy">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-500">{text}</p>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-500">{text}</p>
               <a
                 href="#contact"
-                className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:text-brand-dark"
+                className="mt-5 inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-brand hover:text-brand-dark"
               >
                 Learn More
                 <ArrowRight size={14} />

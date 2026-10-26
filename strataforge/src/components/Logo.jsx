@@ -1,11 +1,11 @@
 import logoUrl from "../assets/StrataLogo.png";
 
-export default function Logo({ light = true, className = "" }) {
+export default function Logo({ light = true, className = "", href = "#home" }) {
   const word = light ? "text-white" : "text-navy";
   const sub = light ? "text-white/45" : "text-slate-500";
 
   return (
-    <a href="#home" className={`flex items-center gap-2.5 ${className}`}>
+    <a href={href} className={`flex items-center gap-2.5 ${className}`}>
       <img
         src={logoUrl}
         alt="StrataForge logo"

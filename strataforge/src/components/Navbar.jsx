@@ -13,9 +13,11 @@ const links = [
 ];
 
 export default function Navbar() {
+  const isProjectsPage = window.location.pathname.replace(/\/$/, "") === "/projects";
+  const homeHref = (href) => (isProjectsPage ? `/${href}` : href);
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [active, setActive] = useState("#home");
+  const [active, setActive] = useState(isProjectsPage ? "#portfolio" : "#home");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -47,19 +49,19 @@ export default function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition duration-300 ${
-        scrolled
+        scrolled || isProjectsPage
           ? "border-b border-white/8 bg-navy/90 backdrop-blur-xl"
           : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
-        <Logo />
+        <Logo href={homeHref("#home")} />
 
         <nav className="hidden items-center gap-8 lg:flex">
           {links.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={homeHref(link.href)}
               className={`relative text-[13.5px] font-medium transition ${
                 active === link.href
                   ? "text-brand"
@@ -75,7 +77,7 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button href="#contact">
+          <Button href={homeHref("#contact")}>
             Get a Quote
             <ArrowRight size={16} />
           </Button>
@@ -97,7 +99,7 @@ export default function Navbar() {
             {links.map((link) => (
               <a
                 key={link.href}
-                href={link.href}
+                href={homeHref(link.href)}
                 onClick={() => setOpen(false)}
                 className={`rounded-lg px-3 py-2.5 text-sm font-medium ${
                   active === link.href
@@ -109,7 +111,7 @@ export default function Navbar() {
               </a>
             ))}
           </nav>
-          <Button href="#contact" className="mt-3 w-full" onClick={() => setOpen(false)}>
+          <Button href={homeHref("#contact")} className="mt-3 w-full" onClick={() => setOpen(false)}>
             Get a Quote
             <ArrowRight size={16} />
           </Button>

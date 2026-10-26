@@ -4,6 +4,7 @@ import Button from "./Button";
 const highlights = [
   {
     icon: Zap,
+    filled: true,
     title: "Modern Solutions",
     text: "Built for your needs",
   },
@@ -65,8 +66,8 @@ function LaptopMock() {
         </div>
       </div>
       <img
-        src="/images/hero-phone-generated-360.webp"
-        srcSet="/images/hero-phone-generated-360.webp 360w, /images/hero-phone-generated-720.webp 720w"
+        src="/images/hero-phone-generated-v2-360.webp"
+        srcSet="/images/hero-phone-generated-v2-360.webp 360w, /images/hero-phone-generated-v2-720.webp 720w"
         sizes="(min-width: 1024px) 150px, (min-width: 640px) 138px, 112px"
         alt="StrataForge mobile website shown on a smartphone"
         draggable={false}
@@ -90,7 +91,7 @@ export default function Hero() {
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 pb-20 pt-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-8 lg:px-8 lg:pb-24 lg:pt-12">
         <div className="max-w-xl">
           <p className="text-[11px] font-semibold tracking-[0.28em] text-white/45">
-            BUILDING IDEAS INTO REAL SOLUTIONS
+            FORGING IDEAS INTO INNOVATION
           </p>
           <h1 className="mt-4 text-[38px] font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-[56px]">
             Custom Software
@@ -113,10 +114,10 @@ export default function Hero() {
             </Button>
           </div>
           <div className="mt-10 grid gap-5 sm:grid-cols-3">
-            {highlights.map(({ icon: Icon, title, text }) => (
+            {highlights.map(({ icon: Icon, filled, title, text }) => (
               <div key={title} className="flex items-start gap-3">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-brand/80 text-brand">
-                  <Icon size={18} />
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand text-white shadow-[0_6px_18px_rgba(255,92,22,0.28)]">
+                  <Icon size={18} fill={filled ? "currentColor" : "none"} />
                 </span>
                 <div>
                   <p className="text-sm font-semibold">{title}</p>
