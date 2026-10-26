@@ -70,7 +70,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/strataforge.dev/"
               target="_blank"
               rel="noreferrer"
               aria-label="StrataForge on Instagram"
