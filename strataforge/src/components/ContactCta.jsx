@@ -6,7 +6,7 @@ const initial = { name: "", email: "", company: "", message: "" };
 
 export default function ContactCta() {
   const [form, setForm] = useState(initial);
-  const [sent, setSent] = useState(false);
+  const [emailDraftReady, setEmailDraftReady] = useState(false);
 
   const onChange = (event) => {
     const { name, value } = event.target;
@@ -15,8 +15,20 @@ export default function ContactCta() {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    setSent(true);
-    setForm(initial);
+    const subject = `StrataForge project inquiry from ${form.name}`;
+    const body = [
+      `Name: ${form.name}`,
+      `Email: ${form.email}`,
+      form.company ? `Company: ${form.company}` : null,
+      "",
+      "Project details:",
+      form.message || "(No project details provided)",
+    ]
+      .filter((line) => line !== null)
+      .join("\n");
+
+    window.location.href = `mailto:strataforge.dev@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setEmailDraftReady(true);
   };
 
   return (
@@ -29,14 +41,14 @@ export default function ContactCta() {
 
       <div className="relative mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
         <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
-          <div className="max-w-xl">
+          <div className="max-w-2xl">
             <div className="mb-3 flex items-center gap-3">
               <span className="h-[2px] w-8 bg-brand" />
               <p className="text-xs font-semibold tracking-[0.22em] text-white/45">
                 LET&apos;S WORK TOGETHER
               </p>
             </div>
-            <h2 className="text-3xl font-extrabold tracking-tight lg:text-[40px]">
+            <h2 className="text-3xl font-extrabold tracking-tight lg:text-[36px] xl:whitespace-nowrap">
               Ready to Build{" "}
               <span className="text-brand">Your Next Project?</span>
             </h2>
@@ -97,9 +109,10 @@ export default function ContactCta() {
               Send message
               <ArrowRight size={16} />
             </Button>
-            {sent && (
+            {emailDraftReady && (
               <p className="text-sm text-brand">
-                Thanks — we&apos;ll get back to you shortly.
+                Your email app should open with the message addressed to
+                strataforge.dev@gmail.com. Review it there and send when ready.
               </p>
             )}
           </div>

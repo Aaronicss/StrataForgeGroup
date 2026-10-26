@@ -19,14 +19,14 @@ export default function Pricing() {
   return (
     <section id="pricing" className="scroll-mt-24 bg-card py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-4xl text-center">
           <div className="mb-3 flex items-center justify-center gap-3">
             <span className="h-[2px] w-8 bg-brand" />
             <p className="text-xs font-semibold tracking-[0.22em] text-slate-400">
               PRICING
             </p>
           </div>
-          <h2 className="text-3xl font-extrabold tracking-tight text-navy lg:text-[40px]">
+          <h2 className="text-3xl font-extrabold tracking-tight text-navy lg:text-[36px] xl:whitespace-nowrap">
             Clear starting points,{" "}
             <span className="text-brand">no surprise scope</span>
           </h2>
@@ -37,11 +37,11 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 lg:grid-cols-1">
+        <div className="mt-12 flex justify-center">
           {plans.map((plan) => (
             <article
               key={plan.name}
-              className={`rounded-2xl p-7 transition duration-200 ${
+              className={`w-full max-w-md rounded-2xl p-7 transition duration-200 ${
                 plan.featured
                   ? "bg-navy text-white shadow-[0_20px_50px_rgba(7,11,20,0.25)]"
                   : "bg-white text-navy ring-1 ring-slate-100"
@@ -76,7 +76,7 @@ export default function Pricing() {
               <Button
                 href="#contact"
                 variant={plan.featured ? "primary" : "dark"}
-                className={`mt-8 w-full ${!plan.featured ? "bg-navy" : ""}`}
+                className={`mt-8 ${!plan.featured ? "bg-navy" : ""}`}
               >
                 Get a Quote
                 <ArrowRight size={16} />

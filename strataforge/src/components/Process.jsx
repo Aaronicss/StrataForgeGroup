@@ -1,6 +1,3 @@
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
-
 const steps = [
   {
     num: "01",
@@ -25,11 +22,6 @@ const steps = [
 ];
 
 export default function Process() {
-  const [index, setIndex] = useState(0);
-
-  const prev = () => setIndex((value) => (value === 0 ? steps.length - 1 : value - 1));
-  const next = () => setIndex((value) => (value === steps.length - 1 ? 0 : value + 1));
-
   return (
     <section
       id="process"
@@ -55,48 +47,24 @@ export default function Process() {
               Development Process
             </h2>
           </div>
-          <div className="flex items-end justify-between gap-6 lg:max-w-sm lg:flex-col lg:items-end">
+          <div className="lg:max-w-sm">
             <p className="text-sm leading-relaxed text-white/55 lg:text-right">
               We make the development process smooth and transparent so you
               always know what to expect.
             </p>
-            <div className="flex gap-2">
-              <button
-                type="button"
-                onClick={prev}
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/80 transition hover:border-brand hover:text-brand"
-                aria-label="Previous step"
-              >
-                <ChevronLeft size={16} />
-              </button>
-              <button
-                type="button"
-                onClick={next}
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/80 transition hover:border-brand hover:text-brand"
-                aria-label="Next step"
-              >
-                <ChevronRight size={16} />
-              </button>
-            </div>
           </div>
         </div>
 
         <div className="relative mt-14">
           <div className="absolute top-[18px] right-[8%] left-[8%] hidden h-px bg-gradient-to-r from-transparent via-brand to-transparent lg:block" />
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-            {steps.map((step, i) => (
+            {steps.map((step) => (
               <article
                 key={step.num}
-                className={`relative pt-1 transition duration-300 ${
-                  index === i ? "opacity-100" : "opacity-80 lg:opacity-100"
-                }`}
+                className="relative pt-1"
               >
                 <div
-                  className={`mb-5 flex h-9 w-9 items-center justify-center rounded-full border text-xs font-bold ${
-                    index === i
-                      ? "border-brand bg-brand text-white"
-                      : "border-white/20 bg-navy text-white"
-                  }`}
+                  className="mb-5 flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-navy text-xs font-bold text-white"
                 >
                   {step.num}
                 </div>

@@ -39,10 +39,14 @@ export default function About() {
             process clear, the code maintainable, and the outcome tied to real
             business results.
           </p>
-          <div className="mt-8 grid grid-cols-3 gap-4">
+          <div className="mt-8 grid grid-cols-3 gap-x-3 gap-y-4 sm:gap-4">
             {stats.map((stat) => (
-              <div key={stat.label}>
-                <p className="text-2xl font-extrabold text-navy">{stat.value}</p>
+              <div key={stat.label} className="min-w-0">
+                <p
+                  className="min-h-[42px] text-xl font-extrabold leading-[1.05] text-navy sm:min-h-[50px] sm:text-2xl"
+                >
+                  {stat.value}
+                </p>
                 <p className="mt-1 text-xs text-slate-500">{stat.label}</p>
               </div>
             ))}
