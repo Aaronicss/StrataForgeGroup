@@ -114,6 +114,10 @@ export default function ContactCta() {
             className="rounded-xl border-0 bg-white/6 px-4 py-3 text-sm text-white outline-none ring-1 ring-white/10 placeholder:text-white/35 focus:ring-brand"
           />
           <div className="md:col-span-2 flex flex-wrap items-center gap-4">
+            <p className="basis-full text-xs leading-relaxed text-white/55">
+              Submitting opens Gmail and passes your details to prepare an email draft for strataforge.dev@gmail.com. StrataForge receives it only if you send it. We use sent inquiries to respond and discuss your project. Read our{" "}
+              <a href="/privacy-policy" className="font-semibold text-white underline underline-offset-2 hover:text-brand">Privacy Policy</a>.
+            </p>
             <Button type="submit" className="mt-1">
               Send message
               <ArrowRight size={16} />

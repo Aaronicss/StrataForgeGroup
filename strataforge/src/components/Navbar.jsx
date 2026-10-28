@@ -13,8 +13,10 @@ const links = [
 ];
 
 export default function Navbar() {
-  const isProjectsPage = window.location.pathname.replace(/\/$/, "") === "/projects";
-  const homeHref = (href) => (isProjectsPage ? `/${href}` : href);
+  const path = window.location.pathname.replace(/\/$/, "") || "/";
+  const isProjectsPage = path === "/projects";
+  const isSubpage = path !== "/" && path !== "/index.html";
+  const homeHref = (href) => (isSubpage ? `/${href}` : href);
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState(isProjectsPage ? "#portfolio" : "#home");
@@ -49,7 +51,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition duration-300 ${
-        scrolled || isProjectsPage
+        scrolled || isSubpage
           ? "border-b border-white/8 bg-navy/90 backdrop-blur-xl"
           : "bg-transparent"
       }`}

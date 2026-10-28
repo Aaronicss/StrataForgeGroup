@@ -1,9 +1,9 @@
 import {
   CloudCog,
   Code2,
+  BriefcaseBusiness,
   Settings2,
   ShieldCheck,
-  Globe,
 } from "lucide-react";
 
 function GithubIcon() {
@@ -51,6 +51,8 @@ const founders = [
     icon: Code2,
     linkedin: "https://www.linkedin.com/in/zoren-christian-magaan/",
     github: "https://github.com/zorenzki",
+    facebook: "https://www.facebook.com/zorenzki",
+    instagram: "https://www.instagram.com/zorenzki/",
     portfolio: "https://zorenchristianmagaan.site/",
   },
   {
@@ -63,7 +65,9 @@ const founders = [
     icon: Settings2,
     linkedin: "https://www.linkedin.com/in/berandreicarpio/",
     github: "https://github.com/andreicrp",
-    portfolio: "https://github.com/andreicrp",
+    facebook: "https://www.facebook.com/andreicrp/",
+    instagram: "https://www.instagram.com/andrecrp_/",
+    portfolio: "https://andreicarpio11.vercel.app/",
   },
   {
     name: "Raymond G. Paderon",
@@ -75,6 +79,8 @@ const founders = [
     icon: ShieldCheck,
     linkedin: "https://www.linkedin.com/in/raymond-paderon-8a9518411/",
     github: "https://github.com/Empire01",
+    facebook: "https://www.facebook.com/Empire0511",
+    instagram: "https://www.instagram.com/pads0511/",
     portfolio: "https://github.com/Empire01",
   },
   {
@@ -87,7 +93,9 @@ const founders = [
     icon: CloudCog,
     linkedin: "https://www.linkedin.com/in/aaron-lazaro/",
     github: "https://github.com/Aaronicss",
-    portfolio: "https://github.com/Aaronicss",
+    facebook: "https://www.facebook.com/OfficialAaronLazaro",
+    instagram: "https://www.instagram.com/aaronlazaroooo/",
+    portfolio: "https://aaronlazaro.framer.website/",
   },
 ];
 
@@ -114,7 +122,7 @@ export default function Founders() {
         </div>
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {founders.map(({ name, role, description, photo, icon: Icon, linkedin, github, portfolio }) => (
+          {founders.map(({ name, role, description, photo, icon: Icon, linkedin, github, facebook, instagram, portfolio }) => (
             <article
               key={name}
               className="group flex min-w-0 flex-col rounded-2xl bg-card p-6 ring-1 ring-slate-100 transition duration-200 hover:-translate-y-1 hover:bg-white hover:shadow-[0_16px_40px_rgba(15,23,42,0.1)]"
@@ -137,7 +145,7 @@ export default function Founders() {
                 <p className="mt-5 text-sm leading-relaxed text-slate-500">
                   {description}
                 </p>
-                <div className="mt-6 flex flex-wrap items-center gap-2">
+                <div className="mt-auto flex flex-wrap items-center gap-2 pt-6">
                   <a
                     href={github}
                     target="_blank"
@@ -158,26 +166,30 @@ export default function Founders() {
                   >
                     <LinkedinIcon />
                   </a>
-                  <a
-                    href="https://www.facebook.com/profile.php?id=61595916267653"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="StrataForge on Facebook"
-                    title="Facebook"
-                    className="grid h-9 w-9 place-items-center rounded-full bg-white text-slate-500 ring-1 ring-slate-200 transition hover:bg-[#1877f2] hover:text-white hover:ring-[#1877f2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
-                  >
-                    <FacebookIcon />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/strataforge.dev/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="StrataForge on Instagram"
-                    title="Instagram"
-                    className="grid h-9 w-9 place-items-center rounded-full bg-white text-slate-500 ring-1 ring-slate-200 transition hover:bg-[#e1306c] hover:text-white hover:ring-[#e1306c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
-                  >
-                    <InstagramIcon />
-                  </a>
+                  {facebook && (
+                    <a
+                      href={facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${name} on Facebook`}
+                      title="Facebook"
+                      className="grid h-9 w-9 place-items-center rounded-full bg-white text-slate-500 ring-1 ring-slate-200 transition hover:bg-[#1877f2] hover:text-white hover:ring-[#1877f2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+                    >
+                      <FacebookIcon />
+                    </a>
+                  )}
+                  {instagram && (
+                    <a
+                      href={instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${name} on Instagram`}
+                      title="Instagram"
+                      className="grid h-9 w-9 place-items-center rounded-full bg-white text-slate-500 ring-1 ring-slate-200 transition hover:bg-[#e1306c] hover:text-white hover:ring-[#e1306c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+                    >
+                      <InstagramIcon />
+                    </a>
+                  )}
                   <a
                     href={portfolio}
                     target="_blank"
@@ -186,7 +198,7 @@ export default function Founders() {
                     title="Digital portfolio"
                     className="grid h-9 w-9 place-items-center rounded-full bg-white text-slate-500 ring-1 ring-slate-200 transition hover:bg-brand hover:text-white hover:ring-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
                   >
-                    <Globe size={16} />
+                    <BriefcaseBusiness size={16} />
                   </a>
                 </div>
               </div>

@@ -6,15 +6,15 @@ const projects = [
   {
     title: "VioTrack: A Student Violation Tracking and Monitoring System Using QR Code and Dashboard",
     type: "Student Discipline System",
-    image: "/images/Projects/Project3/ProjectCover.png",
-    alt: "Corporate business website",
+    image: "/images/Projects/Project3/862759647_29190451233917732_2698232689448480865_n.png",
+    alt: "VioTrack student discipline dashboard with violation analytics",
     gallery: [
+      "/images/Projects/Project3/862759647_29190451233917732_2698232689448480865_n.png",
       "/images/Projects/Project3/ProjectCover.png",
       "/images/Projects/Project3/858427395_943921188513261_8216259075947768121_n.png",
       "/images/Projects/Project3/860058892_1502309408456690_1123298593948926784_n.png",
       "/images/Projects/Project3/860402820_1849551289555915_2208688962598916051_n.png",
       "/images/Projects/Project3/861681083_4642733529379081_4614302481936312381_n.png",
-      "/images/Projects/Project3/862759647_29190451233917732_2698232689448480865_n.png",
       "/images/Projects/Project3/865981602_1506180888229759_644943503975115658_n.png",
       "/images/Projects/Project3/866941062_1832347901252703_5706034088596423859_n.png",
     ],

@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 const stats = [
   { value: "5+", label: "Projects delivered" },
-  { value: "Months of experience", label: "Building software" },
+  { value: "Years of experience", label: "Building software" },
   { value: "100%", label: "Client-focused" },
 ];
 

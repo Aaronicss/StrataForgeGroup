@@ -18,14 +18,23 @@ const groups = [
       { href: "#contact", label: "Get a Quote" },
     ],
   },
+  {
+    title: "Legal",
+    links: [
+      { href: "/privacy-policy", label: "Privacy Policy" },
+      { href: "/terms-and-conditions", label: "Terms & Conditions" },
+      { href: "/cookie-policy", label: "Cookie Policy" },
+    ],
+  },
 ];
 
 export default function Footer() {
-  const onProjectsPage = window.location.pathname.replace(/\/$/, "") === "/projects";
-  const homeHref = (href) => (onProjectsPage ? `/${href}` : href);
+  const path = window.location.pathname.replace(/\/$/, "") || "/";
+  const onSubpage = path !== "/" && path !== "/index.html";
+  const homeHref = (href) => (href.startsWith("#") && onSubpage ? `/${href}` : href);
   return (
     <footer className="border-t border-white/8 bg-[#05070d] text-white">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr] lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:px-8">
         <div>
           <Logo href={homeHref("#home")} />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/45">
