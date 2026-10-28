@@ -4,6 +4,28 @@ import { ArrowRight, ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const projects = [
   {
+    title: "VioTrack: A Student Violation Tracking and Monitoring System Using QR Code and Dashboard",
+    type: "Student Discipline System",
+    image: "/images/Projects/Project3/ProjectCover.png",
+    alt: "Corporate business website",
+    gallery: [
+      "/images/Projects/Project3/ProjectCover.png",
+      "/images/Projects/Project3/858427395_943921188513261_8216259075947768121_n.png",
+      "/images/Projects/Project3/860058892_1502309408456690_1123298593948926784_n.png",
+      "/images/Projects/Project3/860402820_1849551289555915_2208688962598916051_n.png",
+      "/images/Projects/Project3/861681083_4642733529379081_4614302481936312381_n.png",
+      "/images/Projects/Project3/862759647_29190451233917732_2698232689448480865_n.png",
+      "/images/Projects/Project3/865981602_1506180888229759_644943503975115658_n.png",
+      "/images/Projects/Project3/866941062_1832347901252703_5706034088596423859_n.png",
+    ],
+    shortDescription: "QR-enabled student discipline and incident management system.",
+    description:
+      "VioTrack is a web-based student discipline and incident management system for tracking violations from initial report through investigation, conferences, resolution, and clearance. It includes role-specific tools for administrators, teachers, advisers, and students, with responsive interfaces for mobile use.",
+    details:
+      "Personal Project | Full-Stack Developer | React, Vite, TypeScript, Node.js, Prisma, MySQL/MariaDB\n\n➢ Built incident reporting and case management workflows with status tracking, student records, and adviser views.\n➢ Created tools for generating parent summons, conference summaries, and resolution certificates.\n➢ Added QR-based student lookup, dashboard analytics, and searchable audit logs.\n➢ Implemented account security features, including two-factor authentication and session management.\n➢ Designed responsive layouts for desktop and mobile screens.",
+    technologies: ["React", "Vite", "TypeScript", "Node.js", "Prisma", "MySQL/MariaDB"],
+  },
+  {
     title: "PanelCrusher.",
     type: "AI Web Application",
     image: "/images/Projects/Project1/ProjectCover.png",
@@ -62,35 +84,12 @@ const projects = [
     technologies: ["React Native", "Python", "YOLOv11", "Random Forest", "Computer Vision"],
   },
   {
-    title: "VioTrack: A Student Violation Tracking and Monitoring System Using QR Code and Dashboard",
-    type: "Student Discipline System",
-    image: "/images/Projects/Project3/ProjectCover.png",
-    alt: "Corporate business website",
-    gallery: [
-      "/images/Projects/Project3/ProjectCover.png",
-      "/images/Projects/Project3/858427395_943921188513261_8216259075947768121_n.png",
-      "/images/Projects/Project3/860058892_1502309408456690_1123298593948926784_n.png",
-      "/images/Projects/Project3/860402820_1849551289555915_2208688962598916051_n.png",
-      "/images/Projects/Project3/861681083_4642733529379081_4614302481936312381_n.png",
-      "/images/Projects/Project3/862759647_29190451233917732_2698232689448480865_n.png",
-      "/images/Projects/Project3/865981602_1506180888229759_644943503975115658_n.png",
-      "/images/Projects/Project3/866941062_1832347901252703_5706034088596423859_n.png",
-    ],
-    shortDescription: "QR-enabled student discipline and incident management system.",
-    description:
-      "VioTrack is a web-based student discipline and incident management system for tracking violations from initial report through investigation, conferences, resolution, and clearance. It includes role-specific tools for administrators, teachers, advisers, and students, with responsive interfaces for mobile use.",
-    details:
-      "Personal Project | Full-Stack Developer | React, Vite, TypeScript, Node.js, Prisma, MySQL/MariaDB\n\n➢ Built incident reporting and case management workflows with status tracking, student records, and adviser views.\n➢ Created tools for generating parent summons, conference summaries, and resolution certificates.\n➢ Added QR-based student lookup, dashboard analytics, and searchable audit logs.\n➢ Implemented account security features, including two-factor authentication and session management.\n➢ Designed responsive layouts for desktop and mobile screens.",
-    technologies: ["React", "Vite", "TypeScript", "Node.js", "Prisma", "MySQL/MariaDB"],
-  },
-  {
     title: "TALA HOTEL - Website Booking System",
     type: "Hotel Booking System",
     image: "/images/Projects/Project4/ProjectCover.png",
     alt: "Inventory analytics dashboard",
     gallery: [
       "/images/Projects/Project4/ProjectCover.png",
-      "/images/Projects/Project4/853748309_1613644372959333_446718600908643001_n (1).jpg",
       "/images/Projects/Project4/853748309_1613644372959333_446718600908643001_n.jpg",
       "/images/Projects/Project4/854772971_2457933554731611_9137480829681488072_n.jpg",
       "/images/Projects/Project4/856690775_28567671826237248_3169082521655449893_n.jpg",

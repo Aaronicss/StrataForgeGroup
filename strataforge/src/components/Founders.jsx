@@ -3,6 +3,7 @@ import {
   Code2,
   Settings2,
   ShieldCheck,
+  Globe,
 } from "lucide-react";
 
 function GithubIcon() {
@@ -21,6 +22,24 @@ function LinkedinIcon() {
   );
 }
 
+function FacebookIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
+      <path d="M13.4 21v-8.2h2.76l.41-3.2H13.4V7.56c0-.93.26-1.56 1.6-1.56h1.7V3.14C16.4 3.05 15.31 3 14.04 3c-2.66 0-4.48 1.62-4.48 4.6v2H6.75v3.2h2.81V21h3.84Z" />
+    </svg>
+  );
+}
+
+function InstagramIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
 const founders = [
   {
     name: "Zoren Christian C. Magaan",
@@ -28,19 +47,11 @@ const founders = [
     description:
       "Guides the technical vision, system architecture, repository standards, and day-to-day engineering progress.",
     initials: "ZM",
+    photo: "/images/founders/zoren.png",
     icon: Code2,
     linkedin: "https://www.linkedin.com/in/zoren-christian-magaan/",
     github: "https://github.com/zorenzki",
-  },
-  {
-    name: "Aaron Paul B. Lazaro",
-    role: "Co-Founder & Full-Stack Solutions Engineer",
-    description:
-      "Translates client needs into practical software solutions, manages full-stack integrations, and handles cloud deployments.",
-    initials: "AL",
-    icon: CloudCog,
-    linkedin: "https://www.linkedin.com/in/aaron-lazaro/",
-    github: "https://github.com/Aaronicss",
+    portfolio: "https://zorenchristianmagaan.site/",
   },
   {
     name: "Ber Andrei S. Carpio",
@@ -48,9 +59,11 @@ const founders = [
     description:
       "Builds and optimizes clean, high-performance features from development through delivery.",
     initials: "BC",
+    photo: "/images/founders/carpio.png",
     icon: Settings2,
     linkedin: "https://www.linkedin.com/in/berandreicarpio/",
     github: "https://github.com/andreicrp",
+    portfolio: "https://github.com/andreicrp",
   },
   {
     name: "Raymond G. Paderon",
@@ -58,9 +71,23 @@ const founders = [
     description:
       "Improves software reliability through automated testing, security checks, and production quality assurance.",
     initials: "RP",
+    photo: "/images/founders/raymond.png",
     icon: ShieldCheck,
     linkedin: "https://www.linkedin.com/in/raymond-paderon-8a9518411/",
     github: "https://github.com/Empire01",
+    portfolio: "https://github.com/Empire01",
+  },
+  {
+    name: "Aaron Paul B. Lazaro",
+    role: "Co-Founder & Full-Stack Solutions Engineer",
+    description:
+      "Translates client needs into practical software solutions, manages full-stack integrations, and handles cloud deployments.",
+    initials: "AL",
+    photo: "/images/founders/aaron.png",
+    icon: CloudCog,
+    linkedin: "https://www.linkedin.com/in/aaron-lazaro/",
+    github: "https://github.com/Aaronicss",
+    portfolio: "https://github.com/Aaronicss",
   },
 ];
 
@@ -87,14 +114,14 @@ export default function Founders() {
         </div>
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {founders.map(({ name, role, description, initials, icon: Icon, linkedin, github }) => (
+          {founders.map(({ name, role, description, photo, icon: Icon, linkedin, github, portfolio }) => (
             <article
               key={name}
               className="group flex min-w-0 flex-col rounded-2xl bg-card p-6 ring-1 ring-slate-100 transition duration-200 hover:-translate-y-1 hover:bg-white hover:shadow-[0_16px_40px_rgba(15,23,42,0.1)]"
             >
               <div className="flex items-start justify-between gap-4">
-                <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-navy text-xl font-extrabold tracking-tight text-white ring-8 ring-white">
-                  {initials}
+                <div className="h-20 w-20 shrink-0 overflow-hidden rounded-full bg-white">
+                  <img src={photo} alt={`Portrait of ${name}`} className="h-full w-full rounded-full object-contain object-center" />
                 </div>
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand transition group-hover:bg-brand group-hover:text-white">
                   <Icon size={17} strokeWidth={1.9} />
@@ -110,7 +137,7 @@ export default function Founders() {
                 <p className="mt-5 text-sm leading-relaxed text-slate-500">
                   {description}
                 </p>
-                <div className="mt-6 flex items-center gap-2">
+                <div className="mt-6 flex flex-wrap items-center gap-2">
                   <a
                     href={github}
                     target="_blank"
@@ -130,6 +157,36 @@ export default function Founders() {
                     className="grid h-9 w-9 place-items-center rounded-full bg-white text-slate-500 ring-1 ring-slate-200 transition hover:bg-[#0a66c2] hover:text-white hover:ring-[#0a66c2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
                   >
                     <LinkedinIcon />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61595916267653"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="StrataForge on Facebook"
+                    title="Facebook"
+                    className="grid h-9 w-9 place-items-center rounded-full bg-white text-slate-500 ring-1 ring-slate-200 transition hover:bg-[#1877f2] hover:text-white hover:ring-[#1877f2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+                  >
+                    <FacebookIcon />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/strataforge.dev/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="StrataForge on Instagram"
+                    title="Instagram"
+                    className="grid h-9 w-9 place-items-center rounded-full bg-white text-slate-500 ring-1 ring-slate-200 transition hover:bg-[#e1306c] hover:text-white hover:ring-[#e1306c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+                  >
+                    <InstagramIcon />
+                  </a>
+                  <a
+                    href={portfolio}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${name}'s digital portfolio`}
+                    title="Digital portfolio"
+                    className="grid h-9 w-9 place-items-center rounded-full bg-white text-slate-500 ring-1 ring-slate-200 transition hover:bg-brand hover:text-white hover:ring-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+                  >
+                    <Globe size={16} />
                   </a>
                 </div>
               </div>

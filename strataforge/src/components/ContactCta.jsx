@@ -6,7 +6,7 @@ const initial = { name: "", email: "", company: "", message: "" };
 
 export default function ContactCta() {
   const [form, setForm] = useState(initial);
-  const [emailDraftReady, setEmailDraftReady] = useState(false);
+  const [emailDraft, setEmailDraft] = useState(null);
 
   const onChange = (event) => {
     const { name, value } = event.target;
@@ -27,8 +27,17 @@ export default function ContactCta() {
       .filter((line) => line !== null)
       .join("\n");
 
-    window.location.href = `mailto:strataforge.dev@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setEmailDraftReady(true);
+    const recipient = "strataforge.dev@gmail.com";
+    const mailto = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const gmail = new URL("https://mail.google.com/mail/");
+    gmail.searchParams.set("view", "cm");
+    gmail.searchParams.set("fs", "1");
+    gmail.searchParams.set("to", recipient);
+    gmail.searchParams.set("su", subject);
+    gmail.searchParams.set("body", body);
+
+    window.open(gmail.toString(), "_blank", "noopener,noreferrer");
+    setEmailDraft({ gmail: gmail.toString(), mailto });
   };
 
   return (
@@ -109,10 +118,15 @@ export default function ContactCta() {
               Send message
               <ArrowRight size={16} />
             </Button>
-            {emailDraftReady && (
-              <p className="text-sm text-brand">
-                Your email app should open with the message addressed to
-                strataforge.dev@gmail.com. Review it there and send when ready.
+            {emailDraft && (
+              <p role="status" aria-live="polite" className="text-sm leading-relaxed text-brand">
+                Draft prepared for strataforge.dev@gmail.com. If nothing opened, {" "}
+                <a href={emailDraft.gmail} target="_blank" rel="noopener noreferrer" className="inline-block py-2 font-semibold underline underline-offset-2">
+                  open the Gmail draft
+                </a>{" "}or{" "}
+                <a href={emailDraft.mailto} className="inline-block py-2 font-semibold underline underline-offset-2">
+                  use your email app
+                </a>.
               </p>
             )}
           </div>
