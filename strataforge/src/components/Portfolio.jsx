@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Student Management System",
     type: "Web Application",
-    image: "/images/project-sms.jpg",
+    image: "/images/Projects/Project1/ProjectCover.png",
     alt: "Student management dashboard",
     gallery: ["/images/project-sms.jpg", "/images/app-dashboard.png"],
     description:
@@ -16,7 +16,7 @@ const projects = [
   {
     title: "E-Commerce Website",
     type: "Online Store",
-    image: "/images/sneakers.jpg",
+    image: "/images/Projects/Project2/ProjectCover.png",
     alt: "E-commerce product catalog",
     shop: true,
     gallery: ["/images/project-ecommerce.jpg", "/images/sneakers.jpg"],
@@ -27,7 +27,7 @@ const projects = [
   {
     title: "Business Website",
     type: "Corporate Website",
-    image: "/images/project-corporate.jpg",
+    image: "/images/Projects/Project3/ProjectCover.png",
     alt: "Corporate business website",
     overlay: {
       kicker: "STRATAFORGE",
@@ -41,7 +41,7 @@ const projects = [
   {
     title: "Inventory Management System",
     type: "Web Application",
-    image: "/images/dashboard.jpg",
+    image: "/images/Projects/Project4/ProjectCover.png",
     alt: "Inventory analytics dashboard",
     gallery: ["/images/project-inventory.jpg", "/images/dashboard.jpg"],
     description:
@@ -60,17 +60,11 @@ function ProjectVisual({ project }) {
             Shop
           </span>
         </div>
-        <div className="grid grid-cols-2 gap-2 p-3">
-          {[0, 1, 2, 3].map((item) => (
-            <div key={item} className="overflow-hidden rounded-md bg-slate-50">
-              <img
-                src={project.image}
-                alt=""
-                className="h-14 w-full object-cover"
-              />
-            </div>
-          ))}
-        </div>
+        <img
+          src={project.image}
+          alt={project.alt}
+          className="h-[calc(100%-33px)] w-full object-cover transition duration-500 group-hover:scale-105"
+        />
       </div>
     );
   }
