@@ -4,8 +4,8 @@ import { ArrowRight, ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const projects = [
   {
-    title: "Student Management System",
-    type: "Web Application",
+    title: "PanelCrusher.",
+    type: "AI Web Application",
     image: "/images/Projects/Project1/ProjectCover.png",
     alt: "Student management dashboard",
     gallery: [
@@ -27,13 +27,17 @@ const projects = [
       "/images/Projects/Project1/865809379_1792112455408586_7272448000726509725_n.png",
       "/images/Projects/Project1/865898323_1454228423318669_450389851860953359_n.png",
     ],
+    shortDescription: "AI-powered thesis defense simulations from research documents.",
     description:
-      "A centralized student management experience for organizing learner records, monitoring activity, and giving staff a clear view of day-to-day operations.",
-    technologies: ["React", "Tailwind CSS", "Node.js", "PostgreSQL"],
+      "PanelCrusherAI is an AI-powered website application that generates panel questions from uploaded research documents. It supports solo and collaborative group defense simulations with voice synthesis, adaptive LLM follow-ups, and comprehensive rubric scoring.",
+    details:
+      "Personal Project | Solo Developer | Next.js, TypeScript, Supabase, Vercel, Namecheap, Groq API, Hugging Face API\n\n➢ Designed and developed a full-stack AI-powered thesis defense simulation platform that generates panel questions from uploaded research documents using multiple LLM APIs.\n➢ Implemented solo and collaborative defense simulations featuring shared sessions, real-time communication, adaptive questioning, and automated evaluation.\n➢ Integrated LLM APIs for question generation, adaptive follow-up questions, answer scoring, and personalized feedback.",
+    link: "https://panelcrusherai.online/",
+    technologies: ["Next.js", "TypeScript", "Supabase", "Groq API", "Hugging Face API"],
   },
   {
-    title: "E-Commerce Website",
-    type: "Online Store",
+    title: "In-Vento: An AI-Powered Automated Inventory Management System for Small and Medium-Sized Enterprises (SMEs)",
+    type: "Thesis Project",
     image: "/images/Projects/Project2/ProjectCover.png",
     alt: "E-commerce product catalog",
     shop: true,
@@ -48,19 +52,18 @@ const projects = [
       "/images/Projects/Project2/b9ba2c20-a620-4efa-a2b2-99516ca21a52.jpeg",
       "/images/Projects/Project2/eec59df9-7a55-4bcd-8ac3-1d7247921cea.jpeg",
     ],
+    shortDescription: "AI-powered inventory management for small and medium-sized businesses.",
     description:
-      "A clean online storefront that makes product discovery, browsing, and shopping feel simple across desktop and mobile.",
-    technologies: ["React", "Tailwind CSS", "Node.js", "Stripe"],
+      "In-Vento is an AI-powered inventory management application designed to help small and medium-sized businesses monitor ingredient inventory, streamline stock management, and predict ingredient shelf life. It integrates computer vision and machine learning to automate ingredient identification and estimate freshness, helping businesses make informed inventory decisions and reduce potential food waste.",
+    details:
+      "Thesis Project | AI/Full-Stack Developer | React Native, Python, YOLOv11, Random Forest, Computer Vision, Machine Learning, REST APIs, Database Integration\n\n➢ Integrated YOLOv11 for AI-powered ingredient detection to support automated inventory management.\n➢ Developed a Random Forest machine learning model to predict the shelf life of burger ingredients.\n➢ Built mobile application features for user authentication, inventory management, and dashboard reporting.\n➢ Integrated the frontend, backend, database, and AI models to support end-to-end inventory management workflows.\n➢ Tested critical application features, including login, inventory input, dashboard functionality, and AI model integration, to improve system reliability.",
+    technologies: ["React Native", "Python", "YOLOv11", "Random Forest", "Computer Vision"],
   },
   {
-    title: "Business Website",
-    type: "Corporate Website",
+    title: "VioTrack: A Student Violation Tracking and Monitoring System Using QR Code and Dashboard",
+    type: "Student Discipline System",
     image: "/images/Projects/Project3/ProjectCover.png",
     alt: "Corporate business website",
-    overlay: {
-      kicker: "STRATAFORGE",
-      heading: "Building Better Solutions Together",
-    },
     gallery: [
       "/images/Projects/Project3/ProjectCover.png",
       "/images/Projects/Project3/858427395_943921188513261_8216259075947768121_n.png",
@@ -71,13 +74,16 @@ const projects = [
       "/images/Projects/Project3/865981602_1506180888229759_644943503975115658_n.png",
       "/images/Projects/Project3/866941062_1832347901252703_5706034088596423859_n.png",
     ],
+    shortDescription: "QR-enabled student discipline and incident management system.",
     description:
-      "A polished corporate website designed to explain the business clearly, build trust, and guide prospective clients toward getting in touch.",
-    technologies: ["React", "Tailwind CSS", "Vite"],
+      "VioTrack is a web-based student discipline and incident management system for tracking violations from initial report through investigation, conferences, resolution, and clearance. It includes role-specific tools for administrators, teachers, advisers, and students, with responsive interfaces for mobile use.",
+    details:
+      "Personal Project | Full-Stack Developer | React, Vite, TypeScript, Node.js, Prisma, MySQL/MariaDB\n\n➢ Built incident reporting and case management workflows with status tracking, student records, and adviser views.\n➢ Created tools for generating parent summons, conference summaries, and resolution certificates.\n➢ Added QR-based student lookup, dashboard analytics, and searchable audit logs.\n➢ Implemented account security features, including two-factor authentication and session management.\n➢ Designed responsive layouts for desktop and mobile screens.",
+    technologies: ["React", "Vite", "TypeScript", "Node.js", "Prisma", "MySQL/MariaDB"],
   },
   {
-    title: "Inventory Management System",
-    type: "Web Application",
+    title: "TALA HOTEL - Website Booking System",
+    type: "Hotel Booking System",
     image: "/images/Projects/Project4/ProjectCover.png",
     alt: "Inventory analytics dashboard",
     gallery: [
@@ -104,9 +110,12 @@ const projects = [
       "/images/Projects/Project4/866472799_1785406909219134_1780032383438708542_n.jpg",
       "/images/Projects/Project4/867873561_1626177725673960_1807477650899301888_n.jpg",
     ],
+    shortDescription: "Hotel booking and reservation management with an operations dashboard.",
     description:
-      "An inventory operations dashboard that brings stock levels, movement, and performance metrics together in one practical workspace.",
-    technologies: ["React", "TypeScript", "Node.js", "PostgreSQL"],
+      "Tala Hotel is a web-based hotel booking and reservation management system that enables guests to check room availability and submit online reservations, featuring a comprehensive admin dashboard for managing property operations.",
+    details:
+      "HTML, CSS, JavaScript, PHP, Bootstrap, MySQL\n\nKey Features & Contributions:\n- Developed a hotel booking platform enabling guests to check room availability, select standard or package rooms, and submit online reservations.\n- Implemented booking and reservation management using PHP and MySQL, ensuring accurate data processing and secure records.\n- Designed a responsive user interface with HTML, CSS, JavaScript, and Bootstrap to optimize accessibility across devices.\n- Built a centralized admin dashboard and analytics to monitor total revenue, user growth, and guest bookings.\n- Integrated administrative tools for room and package management, user accounts, and an interactive calendar scheduler.",
+    technologies: ["HTML", "CSS", "JavaScript", "PHP", "Bootstrap", "MySQL"],
   },
 ];
 
@@ -114,16 +123,10 @@ function ProjectVisual({ project }) {
   if (project.shop) {
     return (
       <div className="relative h-44 overflow-hidden bg-white">
-        <div className="flex items-center justify-between border-b border-slate-100 px-3 py-2 text-[10px] font-semibold text-slate-500">
-          <span>SneakerCo</span>
-          <span className="rounded-full bg-navy px-2 py-0.5 text-[9px] text-white">
-            Shop
-          </span>
-        </div>
         <img
           src={project.image}
           alt={project.alt}
-          className="h-[calc(100%-33px)] w-full object-cover transition duration-500 group-hover:scale-105"
+          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
         />
       </div>
     );
@@ -231,6 +234,7 @@ export default function Portfolio({ fullPage = false }) {
                 <div className="px-4 py-4">
                   <h3 className="text-sm font-bold text-navy">{project.title}</h3>
                   <p className="mt-1 text-xs text-slate-400">{project.type}</p>
+                  <p className="mt-3 text-xs leading-relaxed text-slate-500">{project.shortDescription}</p>
                 </div>
               </button>
             </article>
@@ -312,7 +316,10 @@ export default function Portfolio({ fullPage = false }) {
                 <h2 id="project-dialog-title" className="mt-3 text-2xl font-extrabold tracking-tight text-navy sm:text-3xl">
                   {activeProject.title}
                 </h2>
-                <p className="mt-5 text-sm leading-7 text-slate-600">{activeProject.description}</p>
+                <p className="mt-5 whitespace-pre-line text-sm leading-7 text-slate-600">{activeProject.description}</p>
+                {activeProject.details && (
+                  <p className="mt-5 whitespace-pre-line text-sm leading-7 text-slate-600">{activeProject.details}</p>
+                )}
                 <div className="mt-8">
                   <h3 className="text-sm font-bold text-navy">Tech stack</h3>
                   <div className="mt-3 flex flex-wrap gap-2">
@@ -323,9 +330,16 @@ export default function Portfolio({ fullPage = false }) {
                     ))}
                   </div>
                 </div>
-                <a href="#contact" onClick={() => setActiveProject(null)} className="mt-9 inline-flex items-center gap-2 rounded-full bg-brand px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-brand/20 transition hover:bg-brand-dark">
-                  Discuss a similar project <ArrowRight size={16} />
-                </a>
+                <div className="mt-9 flex flex-wrap gap-3">
+                  {activeProject.link && (
+                    <a href={activeProject.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-brand px-5 py-3 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white">
+                      Visit project <ArrowRight size={16} />
+                    </a>
+                  )}
+                  <a href="#contact" onClick={() => setActiveProject(null)} className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-brand/20 transition hover:bg-brand-dark">
+                    Discuss a similar project <ArrowRight size={16} />
+                  </a>
+                </div>
               </div>
             </div>
           </section>
