@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading StrataForge…</title>
+    <script>
+      const requestedPath = `${location.pathname}${location.search}${location.hash}`;
+      const projectBase = location.pathname.match(/^\/StrataForgeGroup(?:\/|$)/i)
+        ? "/StrataForgeGroup/"
+        : "/";
+      try {
+        sessionStorage.setItem("spa-redirect", requestedPath);
+      } finally {
+        location.replace(projectBase);
+      }
+    </script>
+  </head>
+  <body>Loading StrataForge…</body>
+</html>
