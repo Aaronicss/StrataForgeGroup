@@ -41,7 +41,9 @@ const projects = [
     image: "/images/Projects/Project2/ProjectCover.png",
     alt: "E-commerce product catalog",
     shop: true,
+    video: "/images/Projects/Project2/In-Vento.mp4",
     gallery: [
+      "/images/Projects/Project2/In-Vento.mp4",
       "/images/Projects/Project2/ProjectCover.png",
       "/images/Projects/Project2/120a863a-bd9f-47ba-8430-3bc789b16ef0.jpeg",
       "/images/Projects/Project2/4c34a289-4b08-4045-b54f-a4559bb7040d.jpeg",
@@ -267,11 +269,22 @@ export default function Portfolio({ fullPage = false }) {
             <div className="grid min-w-0 md:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
               <div className="min-w-0 bg-slate-100 p-4 sm:p-6">
                 <div className="relative flex h-[min(60vh,32rem)] min-h-0 items-center justify-center overflow-hidden rounded-2xl bg-slate-200">
-                  <img
-                    src={activeProject.gallery[activeImage]}
-                    alt={`${activeProject.title} preview ${activeImage + 1}`}
-                    className="max-h-full max-w-full object-contain"
-                  />
+                  {activeProject.gallery[activeImage].endsWith(".mp4") ? (
+                    <video
+                      controls
+                      preload="metadata"
+                      className="max-h-full max-w-full object-contain"
+                    >
+                      <source src={activeProject.gallery[activeImage]} type="video/mp4" />
+                      Your browser does not support the project video.
+                    </video>
+                  ) : (
+                    <img
+                      src={activeProject.gallery[activeImage]}
+                      alt={`${activeProject.title} preview ${activeImage + 1}`}
+                      className="max-h-full max-w-full object-contain"
+                    />
+                  )}
                   {activeProject.gallery.length > 1 && (
                     <>
                       <button
@@ -304,7 +317,11 @@ export default function Portfolio({ fullPage = false }) {
                         aria-pressed={activeImage === index}
                         className={`h-16 w-24 shrink-0 overflow-hidden rounded-lg border-2 transition ${activeImage === index ? "border-brand" : "border-transparent opacity-70 hover:opacity-100"}`}
                       >
-                        <img src={image} alt="" className="h-full w-full object-cover" />
+                        {image.endsWith(".mp4") ? (
+                          <video src={image} muted preload="metadata" className="h-full w-full object-cover" />
+                        ) : (
+                          <img src={image} alt="" className="h-full w-full object-cover" />
+                        )}
                       </button>
                     ))}
                   </div>
