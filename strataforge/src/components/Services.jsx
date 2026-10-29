@@ -1,25 +1,25 @@
-import { ArrowRight, Globe, Code2, Database, Wrench } from "lucide-react";
+import { ArrowRight, Braces, Database, LockKeyhole, Smartphone } from "lucide-react";
 
 const services = [
   {
-    icon: Globe,
-    title: "Website Development",
-    text: "Modern, responsive, and professional websites for businesses, portfolios, and online stores.",
+    icon: Braces,
+    title: "Secure Web Applications",
+    text: "Custom business platforms and internal tools, with security requirements considered during architecture and implementation.",
   },
   {
-    icon: Code2,
-    title: "Custom Systems",
-    text: "Tailored web applications such as inventory, student management, POS, and more.",
+    icon: Smartphone,
+    title: "Mobile Apps & MVPs",
+    text: "Web and mobile product experiences scoped around your users, workflows, data, and launch priorities.",
   },
   {
     icon: Database,
-    title: "Database & Integration",
-    text: "MySQL databases, API integrations, QR systems, and automation solutions.",
+    title: "Backend & API Integrations",
+    text: "Data models, integrations, authentication, and authorization designed around clear trust boundaries.",
   },
   {
-    icon: Wrench,
-    title: "Maintenance & Support",
-    text: "Ongoing support, updates, bug fixes, and system enhancements to keep your business running smoothly.",
+    icon: LockKeyhole,
+    title: "Cloud & Secure Delivery",
+    text: "Threat modeling, relevant OWASP Top 10 risk reviews, dependency checks, and cloud deployment planning.",
   },
 ];
 
@@ -32,25 +32,24 @@ export default function Services() {
             <div className="mb-3 flex items-center gap-3">
               <span className="h-[2px] w-8 bg-brand" />
               <p className="text-xs font-semibold tracking-[0.22em] text-slate-400">
-                OUR SERVICES
+                SECURE SOFTWARE SERVICES
               </p>
             </div>
             <h2 className="text-3xl font-extrabold tracking-tight text-navy lg:text-[40px] lg:leading-tight">
-              Complete Software Solutions
+              Secure Full-Stack Software
               <br />
-              <span className="text-brand">for Your Business</span>
+              <span className="text-brand">Development</span>
             </h2>
           </div>
           <div className="max-w-sm lg:text-right">
             <p className="text-sm leading-relaxed text-slate-500">
-              From websites to custom systems, we provide reliable and scalable
-              solutions tailored to your goals.
+              Need to hire a secure app development team? Our freelance collective builds web and mobile products with data protection considered from architecture through delivery.
             </p>
             <a
-              href="#contact"
+              href="#first-partner"
               className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-brand hover:text-brand-dark"
             >
-              View All Services
+              Discuss your project
               <ArrowRight size={16} />
             </a>
           </div>
@@ -76,6 +75,28 @@ export default function Services() {
               </a>
             </article>
           ))}
+        </div>
+
+        <div className="mt-8 border-t border-slate-100 pt-6">
+          <p className="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
+            Capabilities & example technology stack
+          </p>
+          <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { label: "Frontend", items: ["React", "TypeScript", "Tailwind CSS"] },
+              { label: "Backend & data", items: ["Node.js", "PHP", "PostgreSQL", "MySQL / MariaDB"] },
+              { label: "Cloud & security", items: ["Cloud deployment planning", "Secure API integrations", "Authentication & authorization", "Encryption where appropriate", "OWASP Top 10-informed reviews", "DevSecOps practices scoped to your project"] },
+            ].map(({ label, items }) => (
+              <div key={label}>
+                <h3 className="mb-2 text-sm font-bold text-navy">{label}</h3>
+                <ul className="flex flex-wrap gap-2">
+                  {items.map((item) => (
+                    <li key={item} className="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-medium text-slate-600">{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

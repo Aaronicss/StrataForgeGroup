@@ -1,9 +1,9 @@
 import { ArrowRight } from "lucide-react";
 
 const stats = [
-  { value: "5+", label: "Projects delivered" },
-  { value: "Years of experience", label: "Building software" },
-  { value: "100%", label: "Client-focused" },
+  { value: "Day one", label: "Security considered in architecture" },
+  { value: "Lean team", label: "Fewer handoffs" },
+  { value: "Direct", label: "Access to your builders" },
 ];
 
 export default function About() {
@@ -25,19 +25,17 @@ export default function About() {
             </p>
           </div>
           <h2 className="text-3xl font-extrabold tracking-tight text-navy lg:text-4xl">
-            A software partner for
-            <span className="text-brand"> growing businesses</span>
+            A cybersecurity-minded software collective
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-slate-500">
-            StrataForge is a custom software development agency. We design and
-            build websites, internal systems, and integrations that match the
-            way your team actually works — not generic templates that get in
-            the way.
+            StrataForge is a lean group of full-stack developers focused on
+            custom web and mobile applications. We plan how data moves, who can
+            access it, and how integrations behave as we shape the architecture.
           </p>
           <p className="mt-3 text-[15px] leading-relaxed text-slate-500">
-            From the first conversation to launch and support, we keep the
-            process clear, the code maintainable, and the outcome tied to real
-            business results.
+            You work directly with the people making technical decisions. We
+            keep scope, trade-offs, and delivery milestones clear from the first
+            conversation through launch.
           </p>
           <div className="mt-8 grid grid-cols-3 gap-x-3 gap-y-4 sm:gap-4">
             {stats.map((stat) => (
