@@ -19,6 +19,36 @@ const legalPages = {
 
 export default function App() {
   const path = window.location.pathname.replace(/\/$/, "") || "/";
+  const isHome = path === "/" || path === "/index.html";
+  const siteUrl = new URL("/", window.location.href).href;
+  const organizationId = `${siteUrl}#organization`;
+  const homeSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": organizationId,
+        name: "StrataForge Software Solutions",
+        url: siteUrl,
+        description:
+          "A cybersecurity-focused full-stack software collective building custom websites, web applications, and business systems.",
+        email: "strataforge.dev@gmail.com",
+        logo: new URL("favicon.png", siteUrl).href,
+        sameAs: [
+          "https://www.linkedin.com/company/strataforge-software-solutions/",
+          "https://www.facebook.com/profile.php?id=61595916267653",
+          "https://www.instagram.com/strataforge.dev/",
+        ],
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}#website`,
+        name: "StrataForge Software Solutions",
+        url: siteUrl,
+        publisher: { "@id": organizationId },
+      },
+    ],
+  };
 
   if (path === "/projects") {
     return (
@@ -32,6 +62,9 @@ export default function App() {
 
   return (
     <div className="min-h-svh bg-white">
+      {isHome && (
+        <script type="application/ld+json">{JSON.stringify(homeSchema)}</script>
+      )}
       <Navbar />
       <main>
         <Hero />

@@ -18,6 +18,8 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body,
 * {
   scrollbar-color: #737373 transparent;
   scrollbar-width: thin;
@@ -26,10 +28,16 @@ html {
 *::-webkit-scrollbar {
   width: 10px;
   height: 10px;
+  background: transparent;
 }
 
 *::-webkit-scrollbar-track {
-  background: transparent;
+  background: transparent !important;
+  box-shadow: none;
+}
+
+*::-webkit-scrollbar-track-piece {
+  background: transparent !important;
 }
 
 *::-webkit-scrollbar-corner {
