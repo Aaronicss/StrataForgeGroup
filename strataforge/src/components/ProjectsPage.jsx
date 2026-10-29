@@ -14,7 +14,7 @@ export default function ProjectsPage() {
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_78%_30%,rgba(255,92,22,0.16),transparent_42%)]" />
           </div>
           <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
-            <p className="mb-3 flex items-center gap-3 text-xs font-semibold tracking-[0.22em] text-white/45">
+            <p className="mb-3 flex items-center gap-3 text-xs font-semibold tracking-[0.22em] text-white/70">
               <span className="h-[2px] w-8 bg-brand" />
               SELECTED WORK
             </p>

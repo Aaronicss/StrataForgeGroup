@@ -67,12 +67,12 @@ function LaptopMock() {
       </div>
       <img
         src="/images/hero-phone-generated-v2-360.webp"
-        srcSet="/images/hero-phone-generated-v2-360.webp 360w, /images/hero-phone-generated-v2-720.webp 720w"
+        srcSet="/images/hero-phone-240.webp 240w, /images/hero-phone-360.webp 360w, /images/hero-phone-480.webp 480w"
         sizes="(min-width: 1024px) 150px, (min-width: 640px) 138px, 112px"
         alt="StrataForge mobile website shown on a smartphone"
         draggable={false}
         loading="eager"
-        fetchPriority="low"
+        fetchPriority="high"
         decoding="async"
         className="pointer-events-none absolute -right-4 bottom-8 z-20 w-[112px] drop-shadow-[0_24px_35px_rgba(0,0,0,0.55)] sm:-right-5 sm:bottom-10 sm:w-[138px] lg:-right-4 lg:w-[150px]"
       />
@@ -90,7 +90,7 @@ export default function Hero() {
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 pb-20 pt-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-8 lg:px-8 lg:pb-24 lg:pt-12">
         <div className="max-w-xl">
-          <p className="text-[11px] font-semibold tracking-[0.28em] text-white/45">
+          <p className="text-[11px] font-semibold tracking-[0.28em] text-white/70">
             FORGING IDEAS INTO INNOVATION
           </p>
           <h1 className="mt-4 text-[38px] font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-[56px]">
@@ -121,7 +121,7 @@ export default function Hero() {
                 </span>
                 <div>
                   <p className="text-sm font-semibold">{title}</p>
-                  <p className="mt-0.5 text-xs text-white/50">{text}</p>
+                  <p className="mt-0.5 text-xs text-white/70">{text}</p>
                 </div>
               </div>
             ))}

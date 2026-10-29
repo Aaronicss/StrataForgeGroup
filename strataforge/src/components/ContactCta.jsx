@@ -53,7 +53,7 @@ export default function ContactCta() {
           <div className="max-w-2xl">
             <div className="mb-3 flex items-center gap-3">
               <span className="h-[2px] w-8 bg-brand" />
-              <p className="text-xs font-semibold tracking-[0.22em] text-white/45">
+              <p className="text-xs font-semibold tracking-[0.22em] text-white/70">
                 LET&apos;S WORK TOGETHER
               </p>
             </div>
@@ -61,7 +61,7 @@ export default function ContactCta() {
               Ready to Build{" "}
               <span className="text-brand">Your Next Project?</span>
             </h2>
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-white/55">
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-white/70">
               Let&apos;s turn your ideas into a powerful digital solution. Get
               in touch with us today.
             </p>
@@ -90,7 +90,7 @@ export default function ContactCta() {
             value={form.name}
             onChange={onChange}
             placeholder="Your name"
-            className="rounded-xl border-0 bg-white/6 px-4 py-3 text-sm text-white outline-none ring-1 ring-white/10 placeholder:text-white/35 focus:ring-brand"
+            className="rounded-xl border-0 bg-white/6 px-4 py-3 text-sm text-white outline-none ring-1 ring-white/10 placeholder:text-white/65 focus:ring-brand"
           />
           <label htmlFor="quote-email" className="sr-only">Email address</label>
           <input
@@ -101,7 +101,7 @@ export default function ContactCta() {
             value={form.email}
             onChange={onChange}
             placeholder="Email address"
-            className="rounded-xl border-0 bg-white/6 px-4 py-3 text-sm text-white outline-none ring-1 ring-white/10 placeholder:text-white/35 focus:ring-brand"
+            className="rounded-xl border-0 bg-white/6 px-4 py-3 text-sm text-white outline-none ring-1 ring-white/10 placeholder:text-white/65 focus:ring-brand"
           />
           <label htmlFor="quote-company" className="sr-only">Company (optional)</label>
           <input
@@ -110,7 +110,7 @@ export default function ContactCta() {
             value={form.company}
             onChange={onChange}
             placeholder="Company (optional)"
-            className="rounded-xl border-0 bg-white/6 px-4 py-3 text-sm text-white outline-none ring-1 ring-white/10 placeholder:text-white/35 focus:ring-brand"
+            className="rounded-xl border-0 bg-white/6 px-4 py-3 text-sm text-white outline-none ring-1 ring-white/10 placeholder:text-white/65 focus:ring-brand"
           />
           <label htmlFor="quote-message" className="sr-only">What do you want to build?</label>
           <input
@@ -119,10 +119,10 @@ export default function ContactCta() {
             value={form.message}
             onChange={onChange}
             placeholder="What do you want to build?"
-            className="rounded-xl border-0 bg-white/6 px-4 py-3 text-sm text-white outline-none ring-1 ring-white/10 placeholder:text-white/35 focus:ring-brand"
+            className="rounded-xl border-0 bg-white/6 px-4 py-3 text-sm text-white outline-none ring-1 ring-white/10 placeholder:text-white/65 focus:ring-brand"
           />
           <div className="md:col-span-2 flex flex-wrap items-center gap-4">
-            <p className="basis-full text-xs leading-relaxed text-white/55">
+            <p className="basis-full text-xs leading-relaxed text-white/70">
               Submitting opens Gmail and passes your details to prepare an email draft for strataforge.dev@gmail.com. StrataForge receives it only if you send it. We use sent inquiries to respond and discuss your project. Read our{" "}
               <a href="/privacy-policy" className="font-semibold text-white underline underline-offset-2 hover:text-brand">Privacy Policy</a>.
             </p>

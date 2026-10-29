@@ -9,9 +9,26 @@
   character.className = 'chibi-character'; character.type = 'button';
   character.setAttribute('aria-label', 'Forgey the robot. Click to greet, or drag to move.');
   root.append(bubble, character); document.body.append(root);
+  function loadSprite() {
+    const sprite = new Image();
+    sprite.decoding = 'async';
+    sprite.fetchPriority = 'low';
+    sprite.onload = () => root.classList.add('is-ready');
+    sprite.src = '/mascot/robot-poses.webp';
+  }
+  function scheduleSprite() {
+    if ('requestIdleCallback' in window) requestIdleCallback(loadSprite, { timeout: 1500 });
+    else setTimeout(loadSprite, 250);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', scheduleSprite, { once: true });
+  } else {
+    scheduleSprite();
+  }
   let x = 0, y = 0, lockedUntil = 0, nap = false, drag = null;
   let lastActivity = Date.now(), bubbleTimer, poseTimer, arrivalTimer, gazeFrame;
-  const size = () => root.getBoundingClientRect().width;
+  let mascotSize = innerWidth <= 600 ? 140 : 170;
+  const size = () => mascotSize;
   const clamp = (n, lo, hi) => Math.max(lo, Math.min(n, Math.max(lo, hi)));
   const pose = (name, mood) => {
     root.dataset.pose = name;
@@ -94,7 +111,10 @@
     });
   }, { passive: true });
   const idleTimer = setInterval(() => { if (!drag && !nap && Date.now() - lastActivity > 15000) sleep(); }, 1000);
-  window.addEventListener('resize', () => position(x, y));
+  window.addEventListener('resize', () => {
+    mascotSize = innerWidth <= 600 ? 140 : 170;
+    position(x, y);
+  });
   window.addEventListener('pagehide', () => clearInterval(idleTimer), { once: true });
   window.robotMascot = { greet, sleep, reset, moveTo };
   position(innerWidth - size() - 18, innerHeight - size() - 18);

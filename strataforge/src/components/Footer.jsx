@@ -37,7 +37,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:px-8">
         <div>
           <Logo href={homeHref("#home")} />
-          <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/45">
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
             Custom software, websites, and systems for businesses that want
             tools built around real work.
           </p>
@@ -96,7 +96,7 @@ export default function Footer() {
         </div>
         {groups.map((group) => (
           <div key={group.title}>
-            <p className="text-xs font-semibold tracking-[0.18em] text-white/40">
+            <p className="text-xs font-semibold tracking-[0.18em] text-white/70">
               {group.title.toUpperCase()}
             </p>
             <ul className="mt-4 space-y-2">
@@ -114,7 +114,7 @@ export default function Footer() {
           </div>
         ))}
       </div>
-      <div className="border-t border-white/8 py-5 text-center text-xs text-white/35">
+      <div className="border-t border-white/8 py-5 text-center text-xs text-white/70">
         © {new Date().getFullYear()} StrataForge Software Solutions. All rights
         reserved.
       </div>

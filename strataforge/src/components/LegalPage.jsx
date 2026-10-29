@@ -82,21 +82,21 @@ export default function LegalPage({ type }) {
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_78%_30%,rgba(255,92,22,0.16),transparent_42%)]" />
           </div>
           <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
-            <p className="mb-3 flex items-center gap-3 text-xs font-semibold tracking-[0.22em] text-white/45">
+            <p className="mb-3 flex items-center gap-3 text-xs font-semibold tracking-[0.22em] text-white/70">
               <span className="h-[2px] w-8 bg-brand" />{page.eyebrow}
             </p>
             <h1 className="max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl">
               {page.titleLead} <span className="text-brand">{page.titleAccent}</span>
             </h1>
             <p className="mt-5 max-w-2xl text-sm leading-relaxed text-white/60 sm:text-base">{page.intro}</p>
-            <p className="mt-5 text-xs text-white/45">Last updated October 29, 2026</p>
+            <p className="mt-5 text-xs text-white/70">Last updated October 29, 2026</p>
           </div>
         </section>
 
         <article className="mx-auto max-w-4xl px-5 py-10 sm:py-14">
           <div className="mb-8 flex flex-wrap gap-3 text-sm">
             {Object.entries({ privacy: "Privacy Policy", terms: "Terms & Conditions", cookies: "Cookie Policy" }).map(([key, label]) => (
-              <a key={key} href={`/${key === "privacy" ? "privacy-policy" : key === "terms" ? "terms-and-conditions" : "cookie-policy"}`} className={`rounded-full px-4 py-2 transition ${key === type ? "bg-brand text-white" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}`}>
+              <a key={key} href={`/${key === "privacy" ? "privacy-policy" : key === "terms" ? "terms-and-conditions" : "cookie-policy"}`} className={`rounded-full px-4 py-2 transition ${key === type ? "bg-brand-ink text-white" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}`}>
                 {label}
               </a>
             ))}
@@ -109,7 +109,7 @@ export default function LegalPage({ type }) {
               </section>
             ))}
           </div>
-          <a href="/#home" className="mt-10 inline-flex items-center gap-2 text-sm font-semibold text-brand hover:text-brand-dark">
+          <a href="/#home" className="mt-10 inline-flex items-center gap-2 text-sm font-semibold text-brand-ink hover:text-brand-dark">
             <Link size={15} aria-hidden="true" /> Back to StrataForge
           </a>
         </article>

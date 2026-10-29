@@ -22,7 +22,7 @@ export default function Pricing() {
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-3 flex items-center justify-center gap-3">
             <span className="h-[2px] w-8 bg-brand" />
-            <p className="text-xs font-semibold tracking-[0.22em] text-slate-400">
+            <p className="text-xs font-semibold tracking-[0.22em] text-slate-500">
               PRICING
             </p>
           </div>

@@ -45,7 +45,7 @@ export default function Services() {
           <div>
             <div className="mb-3 flex items-center gap-3">
               <span className="h-[2px] w-8 bg-brand" />
-              <p className="text-xs font-semibold tracking-[0.22em] text-slate-400">
+              <p className="text-xs font-semibold tracking-[0.22em] text-slate-500">
                 OUR SERVICES
               </p>
             </div>
