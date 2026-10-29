@@ -81,7 +81,7 @@ const founders = [
     github: "https://github.com/Empire01",
     facebook: "https://www.facebook.com/Empire0511",
     instagram: "https://www.instagram.com/pads0511/",
-    portfolio: "https://github.com/Empire01",
+    portfolio: "https://empire01.github.io/my-portfolio/",
   },
   {
     name: "Aaron Paul B. Lazaro",
