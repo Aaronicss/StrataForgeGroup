@@ -1,21 +1,22 @@
-import { ArrowRight, ShieldCheck, UsersRound, Milestone } from "lucide-react";
+import { ArrowRight, Zap, ShieldCheck, BarChart3 } from "lucide-react";
 import Button from "./Button";
 
 const highlights = [
   {
+    icon: Zap,
+    filled: true,
+    title: "Modern Solutions",
+    text: "Built for your needs",
+  },
+  {
     icon: ShieldCheck,
-    title: "Security by design",
-    text: "Planned from day one",
+    title: "Reliable & Secure",
+    text: "Your data, our priority",
   },
   {
-    icon: UsersRound,
-    title: "Direct with developers",
-    text: "Fewer handoffs",
-  },
-  {
-    icon: Milestone,
-    title: "Flexible milestones",
-    text: "Scope built around your goals",
+    icon: BarChart3,
+    title: "Business Focused",
+    text: "Solutions that deliver results",
   },
 ];
 
@@ -93,21 +94,19 @@ export default function Hero() {
             FORGING IDEAS INTO INNOVATION
           </p>
           <h1 className="mt-4 text-[38px] font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-[56px]">
-            Secure Full-Stack
+            Custom Software
             <br />
-            <span className="text-brand">Development, Built In</span>
+            Development for
+            <br />
+            <span className="text-brand">Real Businesses</span>
           </h1>
-          <h2 className="mt-5 max-w-xl text-base font-semibold leading-relaxed text-white/80 sm:text-lg">
-            Custom web and mobile applications with cybersecurity considered
-            from architecture through delivery.
-          </h2>
-          <p className="mt-3 max-w-md text-sm leading-relaxed text-white/55">
-            Work directly with the people designing and building your product.
-            We plan for data protection and application risks from day one.
+          <p className="mt-5 max-w-md text-[15px] leading-relaxed text-white/60">
+            We build modern, reliable, and scalable web solutions that help
+            businesses work smarter and grow faster.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button href="#first-partner">
-              Free Security Review
+            <Button href="#contact">
+              Get a Free Quote
               <ArrowRight size={16} />
             </Button>
             <Button href="#portfolio" variant="dark">
@@ -115,10 +114,10 @@ export default function Hero() {
             </Button>
           </div>
           <div className="mt-10 grid gap-5 sm:grid-cols-3">
-            {highlights.map(({ icon: Icon, title, text }) => (
+            {highlights.map(({ icon: Icon, filled, title, text }) => (
               <div key={title} className="flex items-start gap-3">
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand text-white shadow-[0_6px_18px_rgba(255,92,22,0.28)]">
-                  <Icon size={18} />
+                  <Icon size={18} fill={filled ? "currentColor" : "none"} />
                 </span>
                 <div>
                   <p className="text-sm font-semibold">{title}</p>

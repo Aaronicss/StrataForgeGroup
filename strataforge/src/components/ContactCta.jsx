@@ -58,11 +58,12 @@ export default function ContactCta() {
               </p>
             </div>
             <h2 className="text-3xl font-extrabold tracking-tight lg:text-[36px] xl:whitespace-nowrap">
-              Build securely{" "}
-              <span className="text-brand">from day one.</span>
+              Ready to Build{" "}
+              <span className="text-brand">Your Next Project?</span>
             </h2>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-white/55">
-              Tell us what you&apos;re building and what needs to stay protected. We&apos;ll discuss scope, risks, and a practical next step.
+              Let&apos;s turn your ideas into a powerful digital solution. Get
+              in touch with us today.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
