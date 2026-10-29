@@ -4,4 +4,6 @@ try {
     sessionStorage.removeItem("spa-redirect");
     history.replaceState(null, "", requestedPath);
   }
-} catch {}
+} catch {
+  // Session storage can be unavailable in restricted browser contexts.
+}

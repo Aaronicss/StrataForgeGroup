@@ -1,5 +1,7 @@
 {
   "rewrites": [
+    { "source": "/services", "destination": "/index.html" },
+    { "source": "/services/:path*", "destination": "/index.html" },
     { "source": "/projects", "destination": "/index.html" },
     { "source": "/projects/:path*", "destination": "/index.html" },
     { "source": "/privacy-policy", "destination": "/index.html" },

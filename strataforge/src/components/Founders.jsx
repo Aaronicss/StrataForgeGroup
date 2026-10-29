@@ -70,20 +70,6 @@ const founders = [
     portfolio: "https://andreicarpio11.vercel.app/",
   },
   {
-    name: "Raymond G. Paderon",
-    role: "Co-Founder & Software Development Engineer in Test",
-    description:
-      "Improves software reliability through automated testing, security checks, and production quality assurance.",
-    initials: "RP",
-    photo: "/images/founders/raymond.png",
-    icon: ShieldCheck,
-    linkedin: "https://www.linkedin.com/in/raymond-paderon-8a9518411/",
-    github: "https://github.com/Empire01",
-    facebook: "https://www.facebook.com/Empire0511",
-    instagram: "https://www.instagram.com/pads0511/",
-    portfolio: "https://empire01.github.io/my-portfolio/",
-  },
-  {
     name: "Aaron Paul B. Lazaro",
     role: "Co-Founder & Full-Stack Solutions Engineer",
     description:
@@ -96,6 +82,20 @@ const founders = [
     facebook: "https://www.facebook.com/OfficialAaronLazaro",
     instagram: "https://www.instagram.com/aaronlazaroooo/",
     portfolio: "https://aaronlazaro.framer.website/",
+  },
+  {
+    name: "Raymond G. Paderon",
+    role: "Co-Founder & Software Development Engineer in Test",
+    description:
+      "Improves software reliability through automated testing, security checks, and production quality assurance.",
+    initials: "RP",
+    photo: "/images/founders/raymond.png",
+    icon: ShieldCheck,
+    linkedin: "https://www.linkedin.com/in/raymond-paderon-8a9518411/",
+    github: "https://github.com/Empire01",
+    facebook: "https://www.facebook.com/Empire0511",
+    instagram: "https://www.instagram.com/pads0511/",
+    portfolio: "https://empire01.github.io/my-portfolio/",
   },
 ];
 
@@ -112,7 +112,7 @@ export default function Founders() {
               </p>
             </div>
             <h2 className="text-3xl font-extrabold tracking-tight text-navy lg:text-[40px]">
-              Meet the <span className="text-brand">Founders</span>
+              Meet the <span className="text-brand-ink">Founders</span>
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-slate-500 lg:text-right">
@@ -129,9 +129,9 @@ export default function Founders() {
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="h-20 w-20 shrink-0 overflow-hidden rounded-full bg-white">
-                  <img src={photo} alt={`Portrait of ${name}`} className="h-full w-full rounded-full object-contain object-center" />
+                  <img src={photo} alt={`Portrait of ${name}`} loading="lazy" decoding="async" className="h-full w-full rounded-full object-contain object-center" />
                 </div>
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand transition group-hover:bg-brand group-hover:text-white">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand-ink transition group-hover:bg-brand-ink group-hover:text-white">
                   <Icon size={17} strokeWidth={1.9} />
                 </span>
               </div>
@@ -139,7 +139,7 @@ export default function Founders() {
                 <h3 className="text-base font-extrabold leading-snug text-navy">
                   {name}
                 </h3>
-                <p className="mt-2 min-h-[48px] text-xs font-semibold leading-relaxed text-brand">
+                <p className="mt-2 min-h-[48px] text-xs font-semibold leading-relaxed text-brand-ink">
                   {role}
                 </p>
                 <p className="mt-5 text-sm leading-relaxed text-slate-500">

@@ -19,7 +19,10 @@ export default function Navbar() {
   const homeHref = (href) => (isSubpage ? `/${href}` : href);
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [active, setActive] = useState(isProjectsPage ? "#portfolio" : "#home");
+  const isServicesPage = path === "/services";
+  const [active, setActive] = useState(
+    isProjectsPage ? "#portfolio" : isServicesPage ? "#services" : "#home"
+  );
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -56,6 +59,12 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
+      <a
+        href="#main-content"
+        className="fixed left-4 top-2 z-[60] -translate-y-20 rounded-lg bg-white px-4 py-3 text-sm font-bold text-navy shadow-lg transition-transform focus:translate-y-0"
+      >
+        Skip to content
+      </a>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
         <Logo href={homeHref("#home")} />
 

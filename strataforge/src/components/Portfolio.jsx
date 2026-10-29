@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { ArrowRight, ChevronLeft, ChevronRight, X } from "lucide-react";
 
@@ -6,6 +6,7 @@ const projects = [
   {
     title: "VioTrack: A Student Violation Tracking and Monitoring System Using QR Code and Dashboard",
     type: "Student Discipline System",
+    classification: "Personal project · Full-stack developer",
     image: "/images/Projects/Project3/862759647_29190451233917732_2698232689448480865_n.png",
     alt: "VioTrack student discipline dashboard with violation analytics",
     gallery: [
@@ -19,17 +20,18 @@ const projects = [
       "/images/Projects/Project3/866941062_1832347901252703_5706034088596423859_n.png",
     ],
     shortDescription: "QR-enabled student discipline and incident management system.",
-    description:
-      "VioTrack is a web-based student discipline and incident management system for tracking violations from initial report through investigation, conferences, resolution, and clearance. It includes role-specific tools for administrators, teachers, advisers, and students, with responsive interfaces for mobile use.",
-    details:
-      "Personal Project | Full-Stack Developer | React, Vite, TypeScript, Node.js, Prisma, MySQL/MariaDB\n\n➢ Built incident reporting and case management workflows with status tracking, student records, and adviser views.\n➢ Created tools for generating parent summons, conference summaries, and resolution certificates.\n➢ Added QR-based student lookup, dashboard analytics, and searchable audit logs.\n➢ Implemented account security features, including two-factor authentication and session management.\n➢ Designed responsive layouts for desktop and mobile screens.",
+    caseStudyContext:
+      "The project brings incident reports, investigations, conferences, resolutions, and student clearance into one workflow for school administrators, teachers, advisers, and students.",
+    caseStudyWork:
+      "Built a responsive student discipline system with role-specific tools, status-tracked cases, parent summons and conference documents, QR-based student lookup, dashboard analytics, searchable audit logs, two-factor authentication, and session management.",
     technologies: ["React", "Vite", "TypeScript", "Node.js", "Prisma", "MySQL/MariaDB"],
   },
   {
-    title: "PanelCrusher.",
+    title: "PanelCrusher.AI",
     type: "AI Web Application",
+    classification: "Personal project · Solo developer",
     image: "/images/Projects/Project1/ProjectCover.png",
-    alt: "Student management dashboard",
+    alt: "PanelCrusher.AI thesis defense practice application preview",
     gallery: [
       "/images/Projects/Project1/ProjectCover.png",
       "/images/Projects/Project1/858378698_1437195047745346_3926851943311135082_n.png",
@@ -50,18 +52,19 @@ const projects = [
       "/images/Projects/Project1/865898323_1454228423318669_450389851860953359_n.png",
     ],
     shortDescription: "AI-powered thesis defense simulations from research documents.",
-    description:
-      "PanelCrusherAI is an AI-powered website application that generates panel questions from uploaded research documents. It supports solo and collaborative group defense simulations with voice synthesis, adaptive LLM follow-ups, and comprehensive rubric scoring.",
-    details:
-      "Personal Project | Solo Developer | Next.js, TypeScript, Supabase, Vercel, Namecheap, Groq API, Hugging Face API\n\n➢ Designed and developed a full-stack AI-powered thesis defense simulation platform that generates panel questions from uploaded research documents using multiple LLM APIs.\n➢ Implemented solo and collaborative defense simulations featuring shared sessions, real-time communication, adaptive questioning, and automated evaluation.\n➢ Integrated LLM APIs for question generation, adaptive follow-up questions, answer scoring, and personalized feedback.",
+    caseStudyContext:
+      "The application helps users practice thesis-defense questions generated from their uploaded research, either individually or in collaborative group sessions.",
+    caseStudyWork:
+      "Built a full-stack practice platform with shared sessions, real-time communication, voice synthesis, adaptive follow-up questions, automated evaluation, answer scoring, and personalized feedback using multiple LLM APIs.",
     link: "https://panelcrusherai.online/",
     technologies: ["Next.js", "TypeScript", "Supabase", "Groq API", "Hugging Face API"],
   },
   {
     title: "In-Vento: An AI-Powered Automated Inventory Management System for Small and Medium-Sized Enterprises (SMEs)",
     type: "Thesis Project",
+    classification: "Thesis project · AI/full-stack developer",
     image: "/images/Projects/Project2/ProjectCover.png",
-    alt: "E-commerce product catalog",
+    alt: "In-Vento inventory management application preview",
     shop: true,
     video: "/images/Projects/Project2/In-Vento.mp4",
     gallery: [
@@ -77,17 +80,18 @@ const projects = [
       "/images/Projects/Project2/eec59df9-7a55-4bcd-8ac3-1d7247921cea.jpeg",
     ],
     shortDescription: "AI-powered inventory management for small and medium-sized businesses.",
-    description:
-      "In-Vento is an AI-powered inventory management application designed to help small and medium-sized businesses monitor ingredient inventory, streamline stock management, and predict ingredient shelf life. It integrates computer vision and machine learning to automate ingredient identification and estimate freshness, helping businesses make informed inventory decisions and reduce potential food waste.",
-    details:
-      "Thesis Project | AI/Full-Stack Developer | React Native, Python, YOLOv11, Random Forest, Computer Vision, Machine Learning, REST APIs, Database Integration\n\n➢ Integrated YOLOv11 for AI-powered ingredient detection to support automated inventory management.\n➢ Developed a Random Forest machine learning model to predict the shelf life of burger ingredients.\n➢ Built mobile application features for user authentication, inventory management, and dashboard reporting.\n➢ Integrated the frontend, backend, database, and AI models to support end-to-end inventory management workflows.\n➢ Tested critical application features, including login, inventory input, dashboard functionality, and AI model integration, to improve system reliability.",
+    caseStudyContext:
+      "The thesis project focuses on helping small and medium-sized businesses monitor ingredient stock and estimate shelf life for inventory decisions.",
+    caseStudyWork:
+      "Integrated YOLOv11 ingredient detection with a Random Forest shelf-life model, then connected mobile authentication, inventory management, dashboard reporting, backend, and database features into one application.",
     technologies: ["React Native", "Python", "YOLOv11", "Random Forest", "Computer Vision"],
   },
   {
     title: "TALA HOTEL - Website Booking System",
     type: "Hotel Booking System",
+    classification: "Website booking and operations system",
     image: "/images/Projects/Project4/ProjectCover.png",
-    alt: "Inventory analytics dashboard",
+    alt: "Tala Hotel online booking and reservation system preview",
     gallery: [
       "/images/Projects/Project4/ProjectCover.png",
       "/images/Projects/Project4/853748309_1613644372959333_446718600908643001_n.jpg",
@@ -112,10 +116,10 @@ const projects = [
       "/images/Projects/Project4/867873561_1626177725673960_1807477650899301888_n.jpg",
     ],
     shortDescription: "Hotel booking and reservation management with an operations dashboard.",
-    description:
-      "Tala Hotel is a web-based hotel booking and reservation management system that enables guests to check room availability and submit online reservations, featuring a comprehensive admin dashboard for managing property operations.",
-    details:
-      "HTML, CSS, JavaScript, PHP, Bootstrap, MySQL\n\nKey Features & Contributions:\n- Developed a hotel booking platform enabling guests to check room availability, select standard or package rooms, and submit online reservations.\n- Implemented booking and reservation management using PHP and MySQL, ensuring accurate data processing and secure records.\n- Designed a responsive user interface with HTML, CSS, JavaScript, and Bootstrap to optimize accessibility across devices.\n- Built a centralized admin dashboard and analytics to monitor total revenue, user growth, and guest bookings.\n- Integrated administrative tools for room and package management, user accounts, and an interactive calendar scheduler.",
+    caseStudyContext:
+      "Guests need to check room availability and submit reservations, while hotel staff need tools to manage rooms, packages, bookings, and property operations.",
+    caseStudyWork:
+      "Built a responsive booking website and PHP/MySQL reservation workflow, with an admin dashboard for revenue, user, and booking analytics plus room and package management, user accounts, and an interactive calendar.",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "Bootstrap", "MySQL"],
   },
 ];
@@ -127,6 +131,9 @@ function ProjectVisual({ project }) {
         <img
           src={project.image}
           alt={project.alt}
+          loading="lazy"
+          decoding="async"
+          sizes="(min-width: 1024px) 280px, (min-width: 640px) calc((100vw - 3rem) / 2), calc(100vw - 2.5rem)"
           className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
         />
       </div>
@@ -138,6 +145,9 @@ function ProjectVisual({ project }) {
       <img
         src={project.image}
         alt={project.alt}
+        loading="lazy"
+        decoding="async"
+        sizes="(min-width: 1024px) 280px, (min-width: 640px) calc((100vw - 3rem) / 2), calc(100vw - 2.5rem)"
         className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
       />
       {project.overlay && (
@@ -157,6 +167,8 @@ function ProjectVisual({ project }) {
 export default function Portfolio({ fullPage = false }) {
   const [activeProject, setActiveProject] = useState(null);
   const [activeImage, setActiveImage] = useState(0);
+  const closeButtonRef = useRef(null);
+  const triggerRef = useRef(null);
 
   useEffect(() => {
     if (!activeProject) return undefined;
@@ -171,15 +183,32 @@ export default function Portfolio({ fullPage = false }) {
       if (event.key === "ArrowLeft") {
         setActiveImage((index) => (index - 1 + activeProject.gallery.length) % activeProject.gallery.length);
       }
+      if (event.key === "Tab") {
+        const modal = document.getElementById("project-dialog");
+        const focusable = modal?.querySelectorAll('button:not([disabled]), a[href], video[controls], [tabindex]:not([tabindex="-1"])');
+        if (!focusable?.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && (document.activeElement === first || !modal.contains(document.activeElement))) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && (document.activeElement === last || !modal.contains(document.activeElement))) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
     };
     window.addEventListener("keydown", onKeyDown);
+    closeButtonRef.current?.focus();
     return () => {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", onKeyDown);
+      triggerRef.current?.focus();
     };
   }, [activeProject]);
 
-  const openProject = (project) => {
+  const openProject = (project, event) => {
+    triggerRef.current = event.currentTarget;
     setActiveImage(0);
     setActiveProject(project);
   };
@@ -191,26 +220,26 @@ export default function Portfolio({ fullPage = false }) {
           <div>
             <div className="mb-3 flex items-center gap-3">
               <span className="h-[2px] w-8 bg-brand" />
-              <p className="text-xs font-semibold tracking-[0.22em] text-slate-400">
-                {fullPage ? "PROJECT PORTFOLIO" : "FEATURED PROJECTS"}
+              <p className="text-xs font-semibold tracking-[0.22em] text-slate-500">
+                {fullPage ? "PROJECT CASE STUDIES" : "FEATURED CASE STUDIES"}
               </p>
             </div>
             <h2 className="text-3xl font-extrabold tracking-tight text-navy lg:text-[40px]">
               {fullPage ? (
-                <>All <span className="text-brand">Projects</span></>
+                <>All <span className="text-brand-ink">Projects</span></>
               ) : (
-                <>Some of Our <span className="text-brand">Recent Work</span></>
+                <>Selected Work <span className="text-brand-ink">& Case Studies</span></>
               )}
             </h2>
           </div>
           {!fullPage && (
             <div className="max-w-sm lg:text-right">
               <p className="text-sm leading-relaxed text-slate-500">
-                Take a look at some of the systems and websites we&apos;ve developed.
+                Project work by StrataForge members, including personal and thesis projects. Open a card for context, what was built, and technologies used.
               </p>
               <a
                 href="/projects"
-                className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-brand hover:text-brand-dark"
+                className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-brand-ink hover:text-brand-dark"
               >
                 View All Projects
                 <ArrowRight size={16} />
@@ -227,14 +256,14 @@ export default function Portfolio({ fullPage = false }) {
             >
               <button
                 type="button"
-                onClick={() => openProject(project)}
-                aria-label={`View ${project.title} project details`}
+                onClick={(event) => openProject(project, event)}
+                aria-label={`Read the ${project.title} case study`}
                 className="block w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brand"
               >
                 <ProjectVisual project={project} />
                 <div className="px-4 py-4">
                   <h3 className="text-sm font-bold text-navy">{project.title}</h3>
-                  <p className="mt-1 text-xs text-slate-400">{project.type}</p>
+                  <p className="mt-1 text-xs text-slate-500">{project.type}</p>
                   <p className="mt-3 text-xs leading-relaxed text-slate-500">{project.shortDescription}</p>
                 </div>
               </button>
@@ -254,10 +283,12 @@ export default function Portfolio({ fullPage = false }) {
             role="dialog"
             aria-modal="true"
             aria-labelledby="project-dialog-title"
+            id="project-dialog"
             className="relative my-auto max-h-[calc(100svh-2rem)] w-[min(96vw,1680px)] max-w-none overflow-y-auto rounded-3xl bg-white shadow-2xl"
           >
             <button
               type="button"
+              ref={closeButtonRef}
               onClick={() => setActiveProject(null)}
               aria-label="Close project details"
               className="absolute right-4 top-4 z-20 grid h-10 w-10 place-items-center rounded-full bg-navy/85 text-white transition hover:bg-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
@@ -281,6 +312,7 @@ export default function Portfolio({ fullPage = false }) {
                     <img
                       src={activeProject.gallery[activeImage]}
                       alt={`${activeProject.title} preview ${activeImage + 1}`}
+                      decoding="async"
                       className="max-h-full max-w-full object-contain"
                     />
                   )}
@@ -290,7 +322,7 @@ export default function Portfolio({ fullPage = false }) {
                         type="button"
                         aria-label="Previous project image"
                         onClick={() => setActiveImage((index) => (index - 1 + activeProject.gallery.length) % activeProject.gallery.length)}
-                        className="absolute left-3 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-navy/80 text-white hover:bg-brand"
+                        className="absolute left-3 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-navy/80 text-white hover:bg-brand-ink"
                       >
                         <ChevronLeft size={20} />
                       </button>
@@ -298,7 +330,7 @@ export default function Portfolio({ fullPage = false }) {
                         type="button"
                         aria-label="Next project image"
                         onClick={() => setActiveImage((index) => (index + 1) % activeProject.gallery.length)}
-                        className="absolute right-3 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-navy/80 text-white hover:bg-brand"
+                        className="absolute right-3 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-navy/80 text-white hover:bg-brand-ink"
                       >
                         <ChevronRight size={20} />
                       </button>
@@ -317,9 +349,9 @@ export default function Portfolio({ fullPage = false }) {
                         className={`h-16 w-24 shrink-0 overflow-hidden rounded-lg border-2 transition ${activeImage === index ? "border-brand" : "border-transparent opacity-70 hover:opacity-100"}`}
                       >
                         {image.endsWith(".mp4") ? (
-                          <video src={image} muted preload="metadata" className="h-full w-full object-cover" />
+                          <video src={image} muted preload="none" className="h-full w-full object-cover" />
                         ) : (
-                          <img src={image} alt="" className="h-full w-full object-cover" />
+                          <img src={image} alt="" loading="lazy" decoding="async" className="h-full w-full object-cover" />
                         )}
                       </button>
                     ))}
@@ -328,14 +360,19 @@ export default function Portfolio({ fullPage = false }) {
               </div>
 
               <div className="min-w-0 p-6 sm:p-9 md:p-10">
-                <p className="text-xs font-semibold tracking-[0.2em] text-brand">{activeProject.type.toUpperCase()}</p>
+                <p className="text-xs font-semibold tracking-[0.2em] text-brand-ink">{activeProject.type.toUpperCase()}</p>
                 <h2 id="project-dialog-title" className="mt-3 text-2xl font-extrabold tracking-tight text-navy sm:text-3xl">
                   {activeProject.title}
                 </h2>
-                <p className="mt-5 whitespace-pre-line text-sm leading-7 text-slate-600">{activeProject.description}</p>
-                {activeProject.details && (
-                  <p className="mt-5 whitespace-pre-line text-sm leading-7 text-slate-600">{activeProject.details}</p>
-                )}
+                <p className="mt-2 text-xs font-medium text-slate-500">{activeProject.classification}</p>
+                <section className="mt-6">
+                  <h3 className="text-sm font-bold text-navy">Project context</h3>
+                  <p className="mt-2 text-sm leading-7 text-slate-600">{activeProject.caseStudyContext}</p>
+                </section>
+                <section className="mt-5">
+                  <h3 className="text-sm font-bold text-navy">What was built</h3>
+                  <p className="mt-2 text-sm leading-7 text-slate-600">{activeProject.caseStudyWork}</p>
+                </section>
                 <div className="mt-8">
                   <h3 className="text-sm font-bold text-navy">Tech stack</h3>
                   <div className="mt-3 flex flex-wrap gap-2">
@@ -348,11 +385,11 @@ export default function Portfolio({ fullPage = false }) {
                 </div>
                 <div className="mt-9 flex flex-wrap gap-3">
                   {activeProject.link && (
-                    <a href={activeProject.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-brand px-5 py-3 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white">
+                    <a href={activeProject.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-brand-ink px-5 py-3 text-sm font-semibold text-brand-ink transition hover:bg-brand-ink hover:text-white">
                       Visit project <ArrowRight size={16} />
                     </a>
                   )}
-                  <a href="#contact" onClick={() => setActiveProject(null)} className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-brand/20 transition hover:bg-brand-dark">
+                  <a href="#contact" onClick={() => setActiveProject(null)} className="inline-flex items-center gap-2 rounded-full bg-brand-ink px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-brand/20 transition hover:bg-[#9a3412] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-ink focus-visible:ring-offset-2">
                     Discuss a similar project <ArrowRight size={16} />
                   </a>
                 </div>

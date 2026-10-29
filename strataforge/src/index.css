@@ -4,6 +4,7 @@
   --color-brand: #ff5c16;
   --color-brand-hover: #ff7438;
   --color-brand-dark: #e04d0c;
+  --color-brand-ink: #c2410c;
   --color-navy: #070b14;
   --color-navy-soft: #0c1220;
   --color-navy-card: #111827;
@@ -70,6 +71,26 @@ body {
 ::selection {
   background: #ff5c16;
   color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid #ff7b45;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 .diagonal-band {

@@ -7,6 +7,8 @@ const pages = {
   privacy: {
     eyebrow: "YOUR INFORMATION",
     title: "Privacy Policy",
+    titleLead: "Privacy",
+    titleAccent: "Policy",
     intro: "This notice explains what happens when you browse this website or contact StrataForge through the project inquiry form.",
     sections: [
       ["Who is responsible", "StrataForge Software Solutions is responsible for the inquiry information described here. For privacy questions or requests, email strataforge.dev@gmail.com."],
@@ -22,6 +24,8 @@ const pages = {
   terms: {
     eyebrow: "WEBSITE TERMS",
     title: "Terms & Conditions",
+    titleLead: "Terms &",
+    titleAccent: "Conditions",
     intro: "These terms apply to your use of the StrataForge website. Sending an inquiry does not by itself create a client relationship or service agreement.",
     sections: [
       ["Using this website", "You may browse this website for lawful purposes. Do not attempt to disrupt the site, gain unauthorized access, upload harmful code, or misuse its forms or content."],
@@ -36,6 +40,8 @@ const pages = {
   cookies: {
     eyebrow: "BROWSER STORAGE",
     title: "Cookie Policy",
+    titleLead: "Cookie",
+    titleAccent: "Policy",
     intro: "This page describes cookies and similar browser storage used by the StrataForge website, based on the website code currently deployed.",
     sections: [
       ["Cookies and tracking", "The website source currently does not configure analytics cookies, advertising cookies, or marketing pixels. We therefore do not show an optional-cookie consent banner or preference controls."],
@@ -69,14 +75,20 @@ export default function LegalPage({ type }) {
   return (
     <div className="min-h-svh bg-white">
       <Navbar />
-      <main className="pt-24 sm:pt-28">
-        <section className="bg-navy px-5 py-14 text-white sm:py-16">
-          <div className="mx-auto max-w-4xl">
+      <main id="main-content" tabIndex={-1} className="pt-[72px]">
+        <section className="relative overflow-hidden bg-navy py-16 text-white sm:py-20">
+          <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+            <div className="diagonal-band absolute -right-10 -top-36 h-[450px] w-[130px] rotate-[-38deg] opacity-60" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_78%_30%,rgba(255,92,22,0.16),transparent_42%)]" />
+          </div>
+          <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
             <p className="mb-3 flex items-center gap-3 text-xs font-semibold tracking-[0.22em] text-white/45">
               <span className="h-[2px] w-8 bg-brand" />{page.eyebrow}
             </p>
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">{page.title}</h1>
-            <p className="mt-5 max-w-3xl text-sm leading-7 text-white/65 sm:text-base">{page.intro}</p>
+            <h1 className="max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl">
+              {page.titleLead} <span className="text-brand">{page.titleAccent}</span>
+            </h1>
+            <p className="mt-5 max-w-2xl text-sm leading-relaxed text-white/60 sm:text-base">{page.intro}</p>
             <p className="mt-5 text-xs text-white/45">Last updated October 29, 2026</p>
           </div>
         </section>

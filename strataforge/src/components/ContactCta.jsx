@@ -41,7 +41,7 @@ export default function ContactCta() {
   };
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-navy text-white">
+    <section id="contact" className="relative scroll-mt-[72px] overflow-hidden bg-navy text-white">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <div className="diagonal-band absolute -left-16 -top-24 h-[480px] w-[170px] rotate-[-38deg] opacity-80" />
         <div className="diagonal-band absolute left-[18%] -bottom-32 h-[420px] w-[90px] rotate-[-38deg] opacity-70" />
@@ -82,32 +82,40 @@ export default function ContactCta() {
           onSubmit={onSubmit}
           className="mt-14 grid gap-4 rounded-2xl bg-white/4 p-6 ring-1 ring-white/10 md:grid-cols-2"
         >
+          <label htmlFor="quote-name" className="sr-only">Your name</label>
           <input
             required
             name="name"
+            id="quote-name"
             value={form.name}
             onChange={onChange}
             placeholder="Your name"
             className="rounded-xl border-0 bg-white/6 px-4 py-3 text-sm text-white outline-none ring-1 ring-white/10 placeholder:text-white/35 focus:ring-brand"
           />
+          <label htmlFor="quote-email" className="sr-only">Email address</label>
           <input
             required
             type="email"
             name="email"
+            id="quote-email"
             value={form.email}
             onChange={onChange}
             placeholder="Email address"
             className="rounded-xl border-0 bg-white/6 px-4 py-3 text-sm text-white outline-none ring-1 ring-white/10 placeholder:text-white/35 focus:ring-brand"
           />
+          <label htmlFor="quote-company" className="sr-only">Company (optional)</label>
           <input
             name="company"
+            id="quote-company"
             value={form.company}
             onChange={onChange}
             placeholder="Company (optional)"
             className="rounded-xl border-0 bg-white/6 px-4 py-3 text-sm text-white outline-none ring-1 ring-white/10 placeholder:text-white/35 focus:ring-brand"
           />
+          <label htmlFor="quote-message" className="sr-only">What do you want to build?</label>
           <input
             name="message"
+            id="quote-message"
             value={form.message}
             onChange={onChange}
             placeholder="What do you want to build?"

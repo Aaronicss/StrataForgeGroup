@@ -9,6 +9,7 @@ import Pricing from "./components/Pricing";
 import ContactCta from "./components/ContactCta";
 import Footer from "./components/Footer";
 import ProjectsPage from "./components/ProjectsPage";
+import ServicesPage from "./components/ServicesPage";
 import LegalPage from "./components/LegalPage";
 
 const legalPages = {
@@ -56,6 +57,10 @@ export default function App() {
     );
   }
 
+  if (path === "/services") {
+    return <ServicesPage />;
+  }
+
   if (legalPages[path]) {
     return <LegalPage type={legalPages[path]} />;
   }
@@ -66,7 +71,7 @@ export default function App() {
         <script type="application/ld+json">{JSON.stringify(homeSchema)}</script>
       )}
       <Navbar />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <Hero />
         <Services />
         <Process />

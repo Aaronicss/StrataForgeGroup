@@ -10,23 +10,25 @@ export default function About() {
   return (
     <section id="about" className="scroll-mt-24 bg-white py-20 lg:py-24">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-2 lg:px-8">
-        <div className="overflow-hidden rounded-2xl">
+        <div className="aspect-[4/3] overflow-hidden rounded-2xl">
           <img
             src="/images/team.jpg"
             alt="StrataForge team collaborating"
-            className="h-full max-h-[420px] w-full object-cover"
+            loading="lazy"
+            decoding="async"
+            className="h-full w-full object-cover"
           />
         </div>
         <div>
           <div className="mb-3 flex items-center gap-3">
             <span className="h-[2px] w-8 bg-brand" />
-            <p className="text-xs font-semibold tracking-[0.22em] text-brand">
+            <p className="text-xs font-semibold tracking-[0.22em] text-brand-ink">
               ABOUT US
             </p>
           </div>
           <h2 className="text-3xl font-extrabold tracking-tight text-navy lg:text-4xl">
             A software partner for
-            <span className="text-brand"> growing businesses</span>
+            <span className="text-brand-ink"> growing businesses</span>
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-slate-500">
             StrataForge is a custom software development agency. We design and
@@ -53,7 +55,7 @@ export default function About() {
           </div>
           <a
             href="#contact"
-            className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-brand hover:text-brand-dark"
+            className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-brand-ink hover:text-brand-dark"
           >
             Start a project
             <ArrowRight size={16} />

@@ -28,7 +28,7 @@ export default function Pricing() {
           </div>
           <h2 className="text-3xl font-extrabold tracking-tight text-navy lg:text-[36px] xl:whitespace-nowrap">
             Clear starting points,{" "}
-            <span className="text-brand">no surprise scope</span>
+            <span className="text-brand-ink">no surprise scope</span>
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-slate-500">
             Every project is quoted after a short discussion. These ranges help

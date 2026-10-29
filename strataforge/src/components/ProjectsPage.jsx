@@ -7,7 +7,7 @@ export default function ProjectsPage() {
   return (
     <div className="min-h-svh bg-white">
       <Navbar />
-      <main className="pt-[72px]">
+      <main id="main-content" tabIndex={-1} className="pt-[72px]">
         <section className="relative overflow-hidden bg-navy py-16 text-white sm:py-20">
           <div aria-hidden="true" className="pointer-events-none absolute inset-0">
             <div className="diagonal-band absolute -right-10 -top-36 h-[450px] w-[130px] rotate-[-38deg] opacity-60" />
