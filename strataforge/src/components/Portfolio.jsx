@@ -254,7 +254,7 @@ export default function Portfolio({ fullPage = false }) {
             role="dialog"
             aria-modal="true"
             aria-labelledby="project-dialog-title"
-            className="relative my-auto max-h-[calc(100svh-2rem)] w-full max-w-6xl overflow-y-auto rounded-3xl bg-white shadow-2xl"
+            className="relative my-auto max-h-[calc(100svh-2rem)] w-[min(96vw,1680px)] max-w-none overflow-y-auto rounded-3xl bg-white shadow-2xl"
           >
             <button
               type="button"
@@ -265,7 +265,7 @@ export default function Portfolio({ fullPage = false }) {
               <X size={18} />
             </button>
 
-            <div className="grid min-w-0 md:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
+            <div className="grid min-w-0 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
               <div className="min-w-0 bg-slate-100 p-4 sm:p-6">
                 <div className="relative flex h-[min(60vh,32rem)] min-h-0 items-center justify-center overflow-hidden rounded-2xl bg-slate-200">
                   {activeProject.gallery[activeImage].endsWith(".mp4") ? (
